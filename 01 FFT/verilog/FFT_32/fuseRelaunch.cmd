@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/projects/GithubRepositories/Digital Electronics/01 FFT/verilog/FFT_32/test_FFT_32_isim_beh.exe" -prj "D:/projects/GithubRepositories/Digital Electronics/01 FFT/verilog/FFT_32/test_FFT_32_beh.prj" "work.test_FFT_32" "work.glbl" 
