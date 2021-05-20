@@ -1,16 +1,16 @@
 Release 14.7 - xst P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to D:/projects/GithubRepositories/Digital Electronics/01 FFT/verilog/FFT_32/xst/projnav.tmp
+--> Parameter TMPDIR set to D:/projects/GithubRepositories/DigitalElectronics/01 FFT/verilog/FFT_32/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.17 secs
  
---> Parameter xsthdpdir set to D:/projects/GithubRepositories/Digital Electronics/01 FFT/verilog/FFT_32/xst
+--> Parameter xsthdpdir set to D:/projects/GithubRepositories/DigitalElectronics/01 FFT/verilog/FFT_32/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Reading design: FFT_32.prj
 
@@ -39,18 +39,18 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "D:\projects\GithubRepositories\Digital Electronics\01 FFT\verilog\FFT_32\FFT_32.v" into library work
+Analyzing Verilog file "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\FFT_32.v" into library work
 Parsing module <complex_mul>.
 Parsing module <radix_2_fft>.
 Parsing module <FFT_32>.
 
 
-Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 3.65 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.75 secs
  
 --> 
 
-Total memory usage is 205456 kilobytes
+Total memory usage is 204304 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

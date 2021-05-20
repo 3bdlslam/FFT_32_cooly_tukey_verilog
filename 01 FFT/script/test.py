@@ -121,6 +121,7 @@ def Complex2R_I(L):
     return [R,I]
 
 def FFT_test(d,N=32,INT=4,DEC=4,file_path="FFT_test.v"):
+    size=N*(INT+DEC)
     shape=d.shape
     d=d.ravel()
 
@@ -157,8 +158,9 @@ def FFT_test(d,N=32,INT=4,DEC=4,file_path="FFT_test.v"):
 
     for i in d:#i=> list of complex
         C=Complex2R_I(i)
-        f.write(f"Xn_vect_real = 0'h{List2Hex(d=C[0],INT=INT,DEC=DEC)};\n"
-        f"Xn_vect_imag = 0'h{List2Hex(d=C[1],INT=INT,DEC=DEC)};\n"
+        f.write(f"/*{i}*/\n")
+        f.write(f"Xn_vect_real <= {size}'h{List2Hex(d=C[0],INT=INT,DEC=DEC)};\n"
+        f"Xn_vect_imag <= {size}'h{List2Hex(d=C[1],INT=INT,DEC=DEC)};\n"
         "#100;\n\n")
                 
     f.write("end\n\n"
@@ -168,9 +170,10 @@ def FFT_test(d,N=32,INT=4,DEC=4,file_path="FFT_test.v"):
     results=np.fft.fft(d)
     f.write(f"//Expected output:\n")
     for i in results:
+        f.write(f"/*{i}*/\n")
         C=Complex2R_I(i)
         f.write(f"//real={List2Hex(d=C[0],INT=INT,DEC=DEC)}  "
-        f"imag={List2Hex(d=C[1],INT=INT,DEC=DEC)}\n")
+        f"imag={List2Hex(d=C[1],INT=INT,DEC=DEC)}\n\n\n")
 
 
 

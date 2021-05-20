@@ -1,5 +1,5 @@
-set -tmpdir "D:/projects/GithubRepositories/Digital Electronics/01 FFT/verilog/FFT_32/xst/projnav.tmp"
-set -xsthdpdir "D:/projects/GithubRepositories/Digital Electronics/01 FFT/verilog/FFT_32/xst"
+set -tmpdir "D:/projects/GithubRepositories/DigitalElectronics/01 FFT/verilog/FFT_32/xst/projnav.tmp"
+set -xsthdpdir "D:/projects/GithubRepositories/DigitalElectronics/01 FFT/verilog/FFT_32/xst"
 run -compileonly yes
 -p xc7a100t-3-csg324
 -top FFT_32

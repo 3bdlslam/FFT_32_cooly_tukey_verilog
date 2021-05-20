@@ -21,11 +21,11 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/projects/GithubRepositories/Digital Electronics/01 FFT/verilog/FFT_32/FFT_32.v";
+static const char *ng0 = "D:/projects/GithubRepositories/DigitalElectronics/01 FFT/verilog/FFT_32/FFT_32.v";
 
 
 
-static void NetDecl_7_0(char *t0)
+static void NetDecl_8_0(char *t0)
 {
     char t5[8];
     char t8[8];
@@ -57,7 +57,7 @@ LAB0:    t1 = (t0 + 2064U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(7, ng0);
+LAB2:    xsi_set_current_line(8, ng0);
     t2 = (t0 + 760U);
     t3 = *((char **)t2);
     t2 = (t0 + 944U);
@@ -97,7 +97,7 @@ LAB2:    xsi_set_current_line(7, ng0);
 LAB1:    return;
 }
 
-static void NetDecl_8_1(char *t0)
+static void NetDecl_9_1(char *t0)
 {
     char t5[8];
     char t8[8];
@@ -129,7 +129,7 @@ LAB0:    t1 = (t0 + 2208U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(8, ng0);
+LAB2:    xsi_set_current_line(9, ng0);
     t2 = (t0 + 852U);
     t3 = *((char **)t2);
     t2 = (t0 + 944U);
@@ -169,7 +169,7 @@ LAB2:    xsi_set_current_line(8, ng0);
 LAB1:    return;
 }
 
-static void Cont_9_2(char *t0)
+static void Cont_11_2(char *t0)
 {
     char t3[8];
     char *t1;
@@ -204,7 +204,7 @@ LAB0:    t1 = (t0 + 2352U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(9, ng0);
+LAB2:    xsi_set_current_line(11, ng0);
     t2 = (t0 + 1312U);
     t4 = *((char **)t2);
     memset(t3, 0, 8);
@@ -245,7 +245,7 @@ LAB2:    xsi_set_current_line(9, ng0);
 LAB1:    return;
 }
 
-static void Cont_10_3(char *t0)
+static void Cont_12_3(char *t0)
 {
     char t3[8];
     char *t1;
@@ -280,7 +280,7 @@ LAB0:    t1 = (t0 + 2496U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(10, ng0);
+LAB2:    xsi_set_current_line(12, ng0);
     t2 = (t0 + 1404U);
     t4 = *((char **)t2);
     memset(t3, 0, 8);
@@ -322,9 +322,9 @@ LAB1:    return;
 }
 
 
-extern void work_m_00000000002665884784_3542559698_init()
+extern void work_m_00000000000742784129_1646919120_init()
 {
-	static char *pe[] = {(void *)NetDecl_7_0,(void *)NetDecl_8_1,(void *)Cont_9_2,(void *)Cont_10_3};
-	xsi_register_didat("work_m_00000000002665884784_3542559698", "isim/complex_mul_test_isim_beh.exe.sim/work/m_00000000002665884784_3542559698.didat");
+	static char *pe[] = {(void *)NetDecl_8_0,(void *)NetDecl_9_1,(void *)Cont_11_2,(void *)Cont_12_3};
+	xsi_register_didat("work_m_00000000000742784129_1646919120", "isim/radix_2_fft_simu_isim_beh.exe.sim/work/m_00000000000742784129_1646919120.didat");
 	xsi_register_executes(pe);
 }

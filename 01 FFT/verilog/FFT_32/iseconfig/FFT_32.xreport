@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2021-05-20T11:12:23</DateModified>
+  <DateModified>2021-05-20T22:15:28</DateModified>
   <ModuleName>FFT_32</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>D:/projects/GithubRepositories/Digital Electronics/01 FFT/verilog/FFT_32/iseconfig/FFT_32.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/projects/GithubRepositories/Digital Electronics/01 FFT/verilog/FFT_32\</ImplementationReportsDirectory>
+  <SavedFilePath>D:/projects/GithubRepositories/DigitalElectronics/01 FFT/verilog/FFT_32/iseconfig/FFT_32.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>D:/projects/GithubRepositories/DigitalElectronics/01 FFT/verilog/FFT_32\</ImplementationReportsDirectory>
   <DateInitialized>2021-05-15T22:53:25</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

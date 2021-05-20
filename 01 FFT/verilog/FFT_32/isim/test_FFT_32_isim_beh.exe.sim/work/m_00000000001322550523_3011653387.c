@@ -21,12 +21,12 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/projects/GithubRepositories/Digital Electronics/01 FFT/verilog/FFT_32/FFT_32.v";
+static const char *ng0 = "D:/projects/GithubRepositories/DigitalElectronics/01 FFT/verilog/FFT_32/FFT_32.v";
 static unsigned int ng1[] = {245U, 0U};
 
 
 
-static void Cont_21_0(char *t0)
+static void Cont_20_0(char *t0)
 {
     char t5[8];
     char *t1;
@@ -54,7 +54,7 @@ LAB0:    t1 = (t0 + 2592U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(21, ng0);
+LAB2:    xsi_set_current_line(20, ng0);
     t2 = (t0 + 920U);
     t3 = *((char **)t2);
     t2 = (t0 + 1656U);
@@ -86,7 +86,7 @@ LAB2:    xsi_set_current_line(21, ng0);
 LAB1:    return;
 }
 
-static void Cont_22_1(char *t0)
+static void Cont_21_1(char *t0)
 {
     char t5[8];
     char *t1;
@@ -114,7 +114,7 @@ LAB0:    t1 = (t0 + 2736U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(22, ng0);
+LAB2:    xsi_set_current_line(21, ng0);
     t2 = (t0 + 1012U);
     t3 = *((char **)t2);
     t2 = (t0 + 1748U);
@@ -146,7 +146,7 @@ LAB2:    xsi_set_current_line(22, ng0);
 LAB1:    return;
 }
 
-static void Cont_23_2(char *t0)
+static void Cont_22_2(char *t0)
 {
     char t5[8];
     char *t1;
@@ -174,7 +174,7 @@ LAB0:    t1 = (t0 + 2880U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(23, ng0);
+LAB2:    xsi_set_current_line(22, ng0);
     t2 = (t0 + 920U);
     t3 = *((char **)t2);
     t2 = (t0 + 1656U);
@@ -206,7 +206,7 @@ LAB2:    xsi_set_current_line(23, ng0);
 LAB1:    return;
 }
 
-static void Cont_24_3(char *t0)
+static void Cont_23_3(char *t0)
 {
     char t5[8];
     char *t1;
@@ -234,7 +234,7 @@ LAB0:    t1 = (t0 + 3024U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(24, ng0);
+LAB2:    xsi_set_current_line(23, ng0);
     t2 = (t0 + 1012U);
     t3 = *((char **)t2);
     t2 = (t0 + 1748U);
@@ -367,7 +367,7 @@ LAB1:    return;
 
 extern void work_m_00000000001322550523_3011653387_init()
 {
-	static char *pe[] = {(void *)Cont_21_0,(void *)Cont_22_1,(void *)Cont_23_2,(void *)Cont_24_3,(void *)implSig1_execute,(void *)implSig2_execute};
+	static char *pe[] = {(void *)Cont_20_0,(void *)Cont_21_1,(void *)Cont_22_2,(void *)Cont_23_3,(void *)implSig1_execute,(void *)implSig2_execute};
 	xsi_register_didat("work_m_00000000001322550523_3011653387", "isim/test_FFT_32_isim_beh.exe.sim/work/m_00000000001322550523_3011653387.didat");
 	xsi_register_executes(pe);
 }

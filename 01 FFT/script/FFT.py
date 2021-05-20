@@ -74,10 +74,10 @@ def complex_mul(INT=4,DEC=4,file_path="FFT.v"):
             (input signed  [INT-1:-DEC] a,aj,b,bj,
             output signed  [INT-1:-DEC] c,cj);
 
-            wire signed [2*INT-1:-2*DEC] real =(a*b)-(aj*bj);
+            wire signed [2*INT-1:-2*DEC] real_ =(a*b)-(aj*bj);
             wire signed [2*INT-1:-2*DEC] img  =(aj*b)+(a*bj);
 
-            assign c  =real[INT-1:-DEC];
+            assign c  =real_[INT-1:-DEC];
             assign cj =img [INT-1:-DEC];
             endmodule"""))
     f.close()
@@ -136,7 +136,7 @@ def OtherLayers(Const=[[[]]], N=32,file_path="FFT.v"):
                 f".FACTOR({n}'b{Const[L][j][0]}), .FACTOR_IMAG({n}'b{Const[L][j][1]}))\n"
                 f"UUT_{L}_{index}(.X1_real(X{L}_r[{j+i*2**(L+1)}]) , .X1_imag(X{L}_i[{j+i*2**(L+1)}]) ,\n" 
                 f".X2_real(X{L}_r[{j+i*2**(L+1)+2**L}]), .X2_imag(X{L}_i[{j+i*2**(L+1)+2**L}]) ,\n" 
-                f".Y1_real(X{L+1}_r[{j+i*2**(L+1)}]) , .Y1_imag(X{L+1}_i[{j+i*2**(L+1)}])," 
+                f".Y1_real(X{L+1}_r[{j+i*2**(L+1)}]) , .Y1_imag(X{L+1}_i[{j+i*2**(L+1)}]),\n" 
                 f".Y2_real(X{L+1}_r[{j+i*2**(L+1)+2**L}]) , .Y2_imag(X{L+1}_i[{j+i*2**(L+1)+2**L}]));\n")
 
 def FFT(N=32,INT=4,DEC=4,file_path="FFT.v"):
@@ -163,9 +163,11 @@ def FFT(N=32,INT=4,DEC=4,file_path="FFT.v"):
     
     f.write("\n\n")
 
+    t1=N*(INT+DEC)
     for i in range(N):
-        f.write(f"assign X0_r[{i}] =  Xn_vect_real[{(INT+DEC)*(i+1)-1}:{(INT+DEC)*i}];\n"
-        f"assign X0_i[{i}] =  Xn_vect_imag[{(INT+DEC)*(i+1)-1}:{(INT+DEC)*i}] ;\n")
+        f.write(f"assign X0_r[{i}] =  Xn_vect_real[{t1-1}:{t1-8}];\n"
+        f"assign X0_i[{i}] =  Xn_vect_imag[{t1-1}:{t1-8}] ;\n")
+        t1-=(INT+DEC)
     
     f.write("\n\n")
     f.close()
@@ -178,10 +180,11 @@ def FFT(N=32,INT=4,DEC=4,file_path="FFT.v"):
     f=open(file_path,'a') 
     f.write("\n\n")
 
+    t1=N*(INT+DEC)
     for i in range(N):
-        f.write(f"assign Xk_vect_real[{(INT+DEC)*(i+1)-1}:{(INT+DEC)*i}] =  X{int(log2(N))}_r[{i}];\n"
-        f"assign  Xk_vect_imag[{(INT+DEC)*(i+1)-1}:{(INT+DEC)*i}] = X{int(log2(N))}_i[{i}] ;\n")
-
+        f.write(f"assign Xk_vect_real[{t1-1}:{t1-(INT+DEC)}] = X{int(log2(N))}_r[{i}];\n"
+        f"assign Xk_vect_imag[{t1-1}:{t1-(INT+DEC)}] = X{int(log2(N))}_i[{i}] ;\n")
+        t1-=(INT+DEC)
     f.write("\n\n")
 
     f.write("endmodule")
