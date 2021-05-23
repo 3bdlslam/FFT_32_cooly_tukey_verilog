@@ -1,0 +1,1139 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: TopLevel.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TopLevel.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TopLevel"
+Output Format                      : NGC
+Target Device                      : xc7z100-2-ffg1156
+
+---- Source Options
+Top Module Name                    : TopLevel
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\FFT_32.v" into library work
+Parsing module <complex_mul>.
+Parsing module <radix_2_fft>.
+Parsing module <FFT_32>.
+Analyzing Verilog file "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\TopLevel.v" into library work
+Parsing module <TopLevel>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <TopLevel>.
+Reading initialization file \"real_input_file.mem\".
+Reading initialization file \"imag_input_file.mem\".
+
+Elaborating module <FFT_32(INT=4,DEC=4)>.
+
+Elaborating module <radix_2_fft(INT=4,DEC=4,FACTOR=8'b010000,FACTOR_IMAG=8'b0)>.
+
+Elaborating module <complex_mul(INT=4,DEC=4)>.
+
+Elaborating module <radix_2_fft(INT=4,DEC=4,FACTOR=8'b0,FACTOR_IMAG=8'b11110000)>.
+
+Elaborating module <radix_2_fft(INT=4,DEC=4,FACTOR=8'b01011,FACTOR_IMAG=8'b11110101)>.
+
+Elaborating module <radix_2_fft(INT=4,DEC=4,FACTOR=8'b11110101,FACTOR_IMAG=8'b11110101)>.
+
+Elaborating module <radix_2_fft(INT=4,DEC=4,FACTOR=8'b01110,FACTOR_IMAG=8'b11111010)>.
+
+Elaborating module <radix_2_fft(INT=4,DEC=4,FACTOR=8'b0110,FACTOR_IMAG=8'b11110010)>.
+
+Elaborating module <radix_2_fft(INT=4,DEC=4,FACTOR=8'b11111010,FACTOR_IMAG=8'b11110010)>.
+
+Elaborating module <radix_2_fft(INT=4,DEC=4,FACTOR=8'b11110010,FACTOR_IMAG=8'b11111010)>.
+
+Elaborating module <radix_2_fft(INT=4,DEC=4,FACTOR=8'b01111,FACTOR_IMAG=8'b11111101)>.
+
+Elaborating module <radix_2_fft(INT=4,DEC=4,FACTOR=8'b01101,FACTOR_IMAG=8'b11111000)>.
+
+Elaborating module <radix_2_fft(INT=4,DEC=4,FACTOR=8'b01000,FACTOR_IMAG=8'b11110011)>.
+
+Elaborating module <radix_2_fft(INT=4,DEC=4,FACTOR=8'b011,FACTOR_IMAG=8'b11110001)>.
+
+Elaborating module <radix_2_fft(INT=4,DEC=4,FACTOR=8'b11111101,FACTOR_IMAG=8'b11110001)>.
+
+Elaborating module <radix_2_fft(INT=4,DEC=4,FACTOR=8'b11111000,FACTOR_IMAG=8'b11110011)>.
+
+Elaborating module <radix_2_fft(INT=4,DEC=4,FACTOR=8'b11110011,FACTOR_IMAG=8'b11111000)>.
+
+Elaborating module <radix_2_fft(INT=4,DEC=4,FACTOR=8'b11110001,FACTOR_IMAG=8'b11111101)>.
+WARNING:HDLCompiler:413 - "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\TopLevel.v" Line 47: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\TopLevel.v" Line 57: Result of 4-bit expression is truncated to fit in 3-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TopLevel>.
+    Related source file is "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\TopLevel.v".
+        INT = 4
+        DEC = 4
+WARNING:Xst:2999 - Signal 'real_input', unconnected in block 'TopLevel', is tied to its initial value.
+WARNING:Xst:2999 - Signal 'imag_input', unconnected in block 'TopLevel', is tied to its initial value.
+    Found 8x256-bit single-port Read Only RAM <Mram_real_input> for signal <real_input>.
+    Found 8x256-bit single-port Read Only RAM <Mram_imag_input> for signal <imag_input>.
+    Found 3-bit register for signal <in_addr>.
+    Found 3-bit adder for signal <in_addr[2]_GND_1_o_add_15_OUT> created at line 57.
+    Found 3-bit comparator lessequal for signal <in_addr[2]_PWR_1_o_LessThan_15_o> created at line 56
+    Summary:
+	inferred   2 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <TopLevel> synthesized.
+
+Synthesizing Unit <FFT_32>.
+    Related source file is "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\FFT_32.v".
+        INT = 4
+        DEC = 4
+    Found 256-bit register for signal <n0270>.
+    Found 256-bit register for signal <n0337>.
+    Found 256-bit register for signal <n0336>.
+    Found 256-bit register for signal <n0403>.
+    Found 256-bit register for signal <n0402>.
+    Found 256-bit register for signal <n0469>.
+    Found 256-bit register for signal <n0468>.
+    Found 256-bit register for signal <n0535>.
+    Found 256-bit register for signal <n0534>.
+    Found 256-bit register for signal <Xk_vect_imag>.
+    Found 256-bit register for signal <Xk_vect_real>.
+    Found 256-bit register for signal <n0271>.
+    Summary:
+	inferred 3072 D-type flip-flop(s).
+Unit <FFT_32> synthesized.
+
+Synthesizing Unit <radix_2_fft_1>.
+    Related source file is "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\FFT_32.v".
+        INT = 4
+        DEC = 4
+        FACTOR = 8'b00010000
+        FACTOR_IMAG = 8'b00000000
+    Found 8-bit subtractor for signal <Y2_real> created at line 22.
+    Found 8-bit subtractor for signal <Y2_imag> created at line 23.
+    Found 8-bit adder for signal <Y1_real> created at line 20.
+    Found 8-bit adder for signal <Y1_imag> created at line 21.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+Unit <radix_2_fft_1> synthesized.
+
+Synthesizing Unit <complex_mul>.
+    Related source file is "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\FFT_32.v".
+        INT = 4
+        DEC = 4
+    Found 16-bit subtractor for signal <n0014> created at line 8.
+    Found 16-bit adder for signal <n0015> created at line 9.
+    Found 8x8-bit multiplier for signal <a[3]_b[3]_MuLt_0_OUT> created at line 8.
+    Found 8x8-bit multiplier for signal <aj[3]_bj[3]_MuLt_1_OUT> created at line 8.
+    Found 8x8-bit multiplier for signal <n0020> created at line 9.
+    Found 8x8-bit multiplier for signal <n0021> created at line 9.
+    Summary:
+	inferred   4 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <complex_mul> synthesized.
+
+Synthesizing Unit <radix_2_fft_2>.
+    Related source file is "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\FFT_32.v".
+        INT = 4
+        DEC = 4
+        FACTOR = 8'b00000000
+        FACTOR_IMAG = 8'b11110000
+    Found 8-bit subtractor for signal <Y2_real> created at line 22.
+    Found 8-bit subtractor for signal <Y2_imag> created at line 23.
+    Found 8-bit adder for signal <Y1_real> created at line 20.
+    Found 8-bit adder for signal <Y1_imag> created at line 21.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+Unit <radix_2_fft_2> synthesized.
+
+Synthesizing Unit <radix_2_fft_3>.
+    Related source file is "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\FFT_32.v".
+        INT = 4
+        DEC = 4
+        FACTOR = 8'b00001011
+        FACTOR_IMAG = 8'b11110101
+    Found 8-bit subtractor for signal <Y2_real> created at line 22.
+    Found 8-bit subtractor for signal <Y2_imag> created at line 23.
+    Found 8-bit adder for signal <Y1_real> created at line 20.
+    Found 8-bit adder for signal <Y1_imag> created at line 21.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+Unit <radix_2_fft_3> synthesized.
+
+Synthesizing Unit <radix_2_fft_4>.
+    Related source file is "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\FFT_32.v".
+        INT = 4
+        DEC = 4
+        FACTOR = 8'b11110101
+        FACTOR_IMAG = 8'b11110101
+    Found 8-bit subtractor for signal <Y2_real> created at line 22.
+    Found 8-bit subtractor for signal <Y2_imag> created at line 23.
+    Found 8-bit adder for signal <Y1_real> created at line 20.
+    Found 8-bit adder for signal <Y1_imag> created at line 21.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+Unit <radix_2_fft_4> synthesized.
+
+Synthesizing Unit <radix_2_fft_5>.
+    Related source file is "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\FFT_32.v".
+        INT = 4
+        DEC = 4
+        FACTOR = 8'b00001110
+        FACTOR_IMAG = 8'b11111010
+    Found 8-bit subtractor for signal <Y2_real> created at line 22.
+    Found 8-bit subtractor for signal <Y2_imag> created at line 23.
+    Found 8-bit adder for signal <Y1_real> created at line 20.
+    Found 8-bit adder for signal <Y1_imag> created at line 21.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+Unit <radix_2_fft_5> synthesized.
+
+Synthesizing Unit <radix_2_fft_6>.
+    Related source file is "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\FFT_32.v".
+        INT = 4
+        DEC = 4
+        FACTOR = 8'b00000110
+        FACTOR_IMAG = 8'b11110010
+    Found 8-bit subtractor for signal <Y2_real> created at line 22.
+    Found 8-bit subtractor for signal <Y2_imag> created at line 23.
+    Found 8-bit adder for signal <Y1_real> created at line 20.
+    Found 8-bit adder for signal <Y1_imag> created at line 21.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+Unit <radix_2_fft_6> synthesized.
+
+Synthesizing Unit <radix_2_fft_7>.
+    Related source file is "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\FFT_32.v".
+        INT = 4
+        DEC = 4
+        FACTOR = 8'b11111010
+        FACTOR_IMAG = 8'b11110010
+    Found 8-bit subtractor for signal <Y2_real> created at line 22.
+    Found 8-bit subtractor for signal <Y2_imag> created at line 23.
+    Found 8-bit adder for signal <Y1_real> created at line 20.
+    Found 8-bit adder for signal <Y1_imag> created at line 21.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+Unit <radix_2_fft_7> synthesized.
+
+Synthesizing Unit <radix_2_fft_8>.
+    Related source file is "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\FFT_32.v".
+        INT = 4
+        DEC = 4
+        FACTOR = 8'b11110010
+        FACTOR_IMAG = 8'b11111010
+    Found 8-bit subtractor for signal <Y2_real> created at line 22.
+    Found 8-bit subtractor for signal <Y2_imag> created at line 23.
+    Found 8-bit adder for signal <Y1_real> created at line 20.
+    Found 8-bit adder for signal <Y1_imag> created at line 21.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+Unit <radix_2_fft_8> synthesized.
+
+Synthesizing Unit <radix_2_fft_9>.
+    Related source file is "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\FFT_32.v".
+        INT = 4
+        DEC = 4
+        FACTOR = 8'b00001111
+        FACTOR_IMAG = 8'b11111101
+    Found 8-bit subtractor for signal <Y2_real> created at line 22.
+    Found 8-bit subtractor for signal <Y2_imag> created at line 23.
+    Found 8-bit adder for signal <Y1_real> created at line 20.
+    Found 8-bit adder for signal <Y1_imag> created at line 21.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+Unit <radix_2_fft_9> synthesized.
+
+Synthesizing Unit <radix_2_fft_10>.
+    Related source file is "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\FFT_32.v".
+        INT = 4
+        DEC = 4
+        FACTOR = 8'b00001101
+        FACTOR_IMAG = 8'b11111000
+    Found 8-bit subtractor for signal <Y2_real> created at line 22.
+    Found 8-bit subtractor for signal <Y2_imag> created at line 23.
+    Found 8-bit adder for signal <Y1_real> created at line 20.
+    Found 8-bit adder for signal <Y1_imag> created at line 21.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+Unit <radix_2_fft_10> synthesized.
+
+Synthesizing Unit <radix_2_fft_11>.
+    Related source file is "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\FFT_32.v".
+        INT = 4
+        DEC = 4
+        FACTOR = 8'b00001000
+        FACTOR_IMAG = 8'b11110011
+    Found 8-bit subtractor for signal <Y2_real> created at line 22.
+    Found 8-bit subtractor for signal <Y2_imag> created at line 23.
+    Found 8-bit adder for signal <Y1_real> created at line 20.
+    Found 8-bit adder for signal <Y1_imag> created at line 21.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+Unit <radix_2_fft_11> synthesized.
+
+Synthesizing Unit <radix_2_fft_12>.
+    Related source file is "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\FFT_32.v".
+        INT = 4
+        DEC = 4
+        FACTOR = 8'b00000011
+        FACTOR_IMAG = 8'b11110001
+    Found 8-bit subtractor for signal <Y2_real> created at line 22.
+    Found 8-bit subtractor for signal <Y2_imag> created at line 23.
+    Found 8-bit adder for signal <Y1_real> created at line 20.
+    Found 8-bit adder for signal <Y1_imag> created at line 21.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+Unit <radix_2_fft_12> synthesized.
+
+Synthesizing Unit <radix_2_fft_13>.
+    Related source file is "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\FFT_32.v".
+        INT = 4
+        DEC = 4
+        FACTOR = 8'b11111101
+        FACTOR_IMAG = 8'b11110001
+    Found 8-bit subtractor for signal <Y2_real> created at line 22.
+    Found 8-bit subtractor for signal <Y2_imag> created at line 23.
+    Found 8-bit adder for signal <Y1_real> created at line 20.
+    Found 8-bit adder for signal <Y1_imag> created at line 21.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+Unit <radix_2_fft_13> synthesized.
+
+Synthesizing Unit <radix_2_fft_14>.
+    Related source file is "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\FFT_32.v".
+        INT = 4
+        DEC = 4
+        FACTOR = 8'b11111000
+        FACTOR_IMAG = 8'b11110011
+    Found 8-bit subtractor for signal <Y2_real> created at line 22.
+    Found 8-bit subtractor for signal <Y2_imag> created at line 23.
+    Found 8-bit adder for signal <Y1_real> created at line 20.
+    Found 8-bit adder for signal <Y1_imag> created at line 21.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+Unit <radix_2_fft_14> synthesized.
+
+Synthesizing Unit <radix_2_fft_15>.
+    Related source file is "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\FFT_32.v".
+        INT = 4
+        DEC = 4
+        FACTOR = 8'b11110011
+        FACTOR_IMAG = 8'b11111000
+    Found 8-bit subtractor for signal <Y2_real> created at line 22.
+    Found 8-bit subtractor for signal <Y2_imag> created at line 23.
+    Found 8-bit adder for signal <Y1_real> created at line 20.
+    Found 8-bit adder for signal <Y1_imag> created at line 21.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+Unit <radix_2_fft_15> synthesized.
+
+Synthesizing Unit <radix_2_fft_16>.
+    Related source file is "D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT_32\FFT_32.v".
+        INT = 4
+        DEC = 4
+        FACTOR = 8'b11110001
+        FACTOR_IMAG = 8'b11111101
+    Found 8-bit subtractor for signal <Y2_real> created at line 22.
+    Found 8-bit subtractor for signal <Y2_imag> created at line 23.
+    Found 8-bit adder for signal <Y1_real> created at line 20.
+    Found 8-bit adder for signal <Y1_imag> created at line 21.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+Unit <radix_2_fft_16> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 8x256-bit single-port Read Only RAM                   : 2
+# Multipliers                                          : 320
+ 8x8-bit multiplier                                    : 320
+# Adders/Subtractors                                   : 481
+ 16-bit adder                                          : 80
+ 16-bit subtractor                                     : 80
+ 3-bit adder                                           : 1
+ 8-bit adder                                           : 160
+ 8-bit subtractor                                      : 160
+# Registers                                            : 13
+ 256-bit register                                      : 12
+ 3-bit register                                        : 1
+# Comparators                                          : 1
+ 3-bit comparator lessequal                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <TopLevel>.
+The following registers are absorbed into counter <in_addr>: 1 register on signal <in_addr>.
+INFO:Xst:3231 - The small RAM <Mram_real_input> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 256-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <in_addr>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_imag_input> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 256-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <in_addr>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <TopLevel> synthesized (advanced).
+
+Synthesizing (advanced) Unit <radix_2_fft_1>.
+	Multiplier <mul/Mmult_n0020> in block <radix_2_fft_1> and adder/subtractor <mul/Madd_n0015_Madd> in block <radix_2_fft_1> are combined into a MAC<mul/Maddsub_n0020>.
+	Multiplier <mul/Mmult_a[3]_b[3]_MuLt_0_OUT> in block <radix_2_fft_1> and adder/subtractor <mul/Msub_n0014_Madd> in block <radix_2_fft_1> are combined into a MAC<mul/Maddsub_a[3]_b[3]_MuLt_0_OUT>.
+Unit <radix_2_fft_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <radix_2_fft_10>.
+	Multiplier <mul/Mmult_n0020> in block <radix_2_fft_10> and adder/subtractor <mul/Madd_n0015_Madd> in block <radix_2_fft_10> are combined into a MAC<mul/Maddsub_n0020>.
+	Multiplier <mul/Mmult_a[3]_b[3]_MuLt_0_OUT> in block <radix_2_fft_10> and adder/subtractor <mul/Msub_n0014_Madd> in block <radix_2_fft_10> are combined into a MAC<mul/Maddsub_a[3]_b[3]_MuLt_0_OUT>.
+Unit <radix_2_fft_10> synthesized (advanced).
+
+Synthesizing (advanced) Unit <radix_2_fft_11>.
+	Multiplier <mul/Mmult_n0020> in block <radix_2_fft_11> and adder/subtractor <mul/Madd_n0015_Madd> in block <radix_2_fft_11> are combined into a MAC<mul/Maddsub_n0020>.
+	Multiplier <mul/Mmult_a[3]_b[3]_MuLt_0_OUT> in block <radix_2_fft_11> and adder/subtractor <mul/Msub_n0014_Madd> in block <radix_2_fft_11> are combined into a MAC<mul/Maddsub_a[3]_b[3]_MuLt_0_OUT>.
+Unit <radix_2_fft_11> synthesized (advanced).
+
+Synthesizing (advanced) Unit <radix_2_fft_12>.
+	Multiplier <mul/Mmult_n0020> in block <radix_2_fft_12> and adder/subtractor <mul/Madd_n0015_Madd> in block <radix_2_fft_12> are combined into a MAC<mul/Maddsub_n0020>.
+	Multiplier <mul/Mmult_a[3]_b[3]_MuLt_0_OUT> in block <radix_2_fft_12> and adder/subtractor <mul/Msub_n0014_Madd> in block <radix_2_fft_12> are combined into a MAC<mul/Maddsub_a[3]_b[3]_MuLt_0_OUT>.
+Unit <radix_2_fft_12> synthesized (advanced).
+
+Synthesizing (advanced) Unit <radix_2_fft_13>.
+	Multiplier <mul/Mmult_n0020> in block <radix_2_fft_13> and adder/subtractor <mul/Madd_n0015_Madd> in block <radix_2_fft_13> are combined into a MAC<mul/Maddsub_n0020>.
+	Multiplier <mul/Mmult_a[3]_b[3]_MuLt_0_OUT> in block <radix_2_fft_13> and adder/subtractor <mul/Msub_n0014_Madd> in block <radix_2_fft_13> are combined into a MAC<mul/Maddsub_a[3]_b[3]_MuLt_0_OUT>.
+Unit <radix_2_fft_13> synthesized (advanced).
+
+Synthesizing (advanced) Unit <radix_2_fft_14>.
+	Multiplier <mul/Mmult_n0020> in block <radix_2_fft_14> and adder/subtractor <mul/Madd_n0015_Madd> in block <radix_2_fft_14> are combined into a MAC<mul/Maddsub_n0020>.
+	Multiplier <mul/Mmult_a[3]_b[3]_MuLt_0_OUT> in block <radix_2_fft_14> and adder/subtractor <mul/Msub_n0014_Madd> in block <radix_2_fft_14> are combined into a MAC<mul/Maddsub_a[3]_b[3]_MuLt_0_OUT>.
+Unit <radix_2_fft_14> synthesized (advanced).
+
+Synthesizing (advanced) Unit <radix_2_fft_15>.
+	Multiplier <mul/Mmult_n0020> in block <radix_2_fft_15> and adder/subtractor <mul/Madd_n0015_Madd> in block <radix_2_fft_15> are combined into a MAC<mul/Maddsub_n0020>.
+	Multiplier <mul/Mmult_a[3]_b[3]_MuLt_0_OUT> in block <radix_2_fft_15> and adder/subtractor <mul/Msub_n0014_Madd> in block <radix_2_fft_15> are combined into a MAC<mul/Maddsub_a[3]_b[3]_MuLt_0_OUT>.
+Unit <radix_2_fft_15> synthesized (advanced).
+
+Synthesizing (advanced) Unit <radix_2_fft_16>.
+	Multiplier <mul/Mmult_n0020> in block <radix_2_fft_16> and adder/subtractor <mul/Madd_n0015_Madd> in block <radix_2_fft_16> are combined into a MAC<mul/Maddsub_n0020>.
+	Multiplier <mul/Mmult_a[3]_b[3]_MuLt_0_OUT> in block <radix_2_fft_16> and adder/subtractor <mul/Msub_n0014_Madd> in block <radix_2_fft_16> are combined into a MAC<mul/Maddsub_a[3]_b[3]_MuLt_0_OUT>.
+Unit <radix_2_fft_16> synthesized (advanced).
+
+Synthesizing (advanced) Unit <radix_2_fft_2>.
+	Multiplier <mul/Mmult_n0020> in block <radix_2_fft_2> and adder/subtractor <mul/Madd_n0015_Madd> in block <radix_2_fft_2> are combined into a MAC<mul/Maddsub_n0020>.
+	Multiplier <mul/Mmult_a[3]_b[3]_MuLt_0_OUT> in block <radix_2_fft_2> and adder/subtractor <mul/Msub_n0014_Madd> in block <radix_2_fft_2> are combined into a MAC<mul/Maddsub_a[3]_b[3]_MuLt_0_OUT>.
+Unit <radix_2_fft_2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <radix_2_fft_3>.
+	Multiplier <mul/Mmult_n0020> in block <radix_2_fft_3> and adder/subtractor <mul/Madd_n0015_Madd> in block <radix_2_fft_3> are combined into a MAC<mul/Maddsub_n0020>.
+	Multiplier <mul/Mmult_a[3]_b[3]_MuLt_0_OUT> in block <radix_2_fft_3> and adder/subtractor <mul/Msub_n0014_Madd> in block <radix_2_fft_3> are combined into a MAC<mul/Maddsub_a[3]_b[3]_MuLt_0_OUT>.
+Unit <radix_2_fft_3> synthesized (advanced).
+
+Synthesizing (advanced) Unit <radix_2_fft_4>.
+	Multiplier <mul/Mmult_n0020> in block <radix_2_fft_4> and adder/subtractor <mul/Madd_n0015_Madd> in block <radix_2_fft_4> are combined into a MAC<mul/Maddsub_n0020>.
+	Multiplier <mul/Mmult_a[3]_b[3]_MuLt_0_OUT> in block <radix_2_fft_4> and adder/subtractor <mul/Msub_n0014_Madd> in block <radix_2_fft_4> are combined into a MAC<mul/Maddsub_a[3]_b[3]_MuLt_0_OUT>.
+Unit <radix_2_fft_4> synthesized (advanced).
+
+Synthesizing (advanced) Unit <radix_2_fft_5>.
+	Multiplier <mul/Mmult_n0020> in block <radix_2_fft_5> and adder/subtractor <mul/Madd_n0015_Madd> in block <radix_2_fft_5> are combined into a MAC<mul/Maddsub_n0020>.
+	Multiplier <mul/Mmult_a[3]_b[3]_MuLt_0_OUT> in block <radix_2_fft_5> and adder/subtractor <mul/Msub_n0014_Madd> in block <radix_2_fft_5> are combined into a MAC<mul/Maddsub_a[3]_b[3]_MuLt_0_OUT>.
+Unit <radix_2_fft_5> synthesized (advanced).
+
+Synthesizing (advanced) Unit <radix_2_fft_6>.
+	Multiplier <mul/Mmult_n0020> in block <radix_2_fft_6> and adder/subtractor <mul/Madd_n0015_Madd> in block <radix_2_fft_6> are combined into a MAC<mul/Maddsub_n0020>.
+	Multiplier <mul/Mmult_a[3]_b[3]_MuLt_0_OUT> in block <radix_2_fft_6> and adder/subtractor <mul/Msub_n0014_Madd> in block <radix_2_fft_6> are combined into a MAC<mul/Maddsub_a[3]_b[3]_MuLt_0_OUT>.
+Unit <radix_2_fft_6> synthesized (advanced).
+
+Synthesizing (advanced) Unit <radix_2_fft_7>.
+	Multiplier <mul/Mmult_n0020> in block <radix_2_fft_7> and adder/subtractor <mul/Madd_n0015_Madd> in block <radix_2_fft_7> are combined into a MAC<mul/Maddsub_n0020>.
+	Multiplier <mul/Mmult_a[3]_b[3]_MuLt_0_OUT> in block <radix_2_fft_7> and adder/subtractor <mul/Msub_n0014_Madd> in block <radix_2_fft_7> are combined into a MAC<mul/Maddsub_a[3]_b[3]_MuLt_0_OUT>.
+Unit <radix_2_fft_7> synthesized (advanced).
+
+Synthesizing (advanced) Unit <radix_2_fft_8>.
+	Multiplier <mul/Mmult_n0020> in block <radix_2_fft_8> and adder/subtractor <mul/Madd_n0015_Madd> in block <radix_2_fft_8> are combined into a MAC<mul/Maddsub_n0020>.
+	Multiplier <mul/Mmult_a[3]_b[3]_MuLt_0_OUT> in block <radix_2_fft_8> and adder/subtractor <mul/Msub_n0014_Madd> in block <radix_2_fft_8> are combined into a MAC<mul/Maddsub_a[3]_b[3]_MuLt_0_OUT>.
+Unit <radix_2_fft_8> synthesized (advanced).
+
+Synthesizing (advanced) Unit <radix_2_fft_9>.
+	Multiplier <mul/Mmult_n0020> in block <radix_2_fft_9> and adder/subtractor <mul/Madd_n0015_Madd> in block <radix_2_fft_9> are combined into a MAC<mul/Maddsub_n0020>.
+	Multiplier <mul/Mmult_a[3]_b[3]_MuLt_0_OUT> in block <radix_2_fft_9> and adder/subtractor <mul/Msub_n0014_Madd> in block <radix_2_fft_9> are combined into a MAC<mul/Maddsub_a[3]_b[3]_MuLt_0_OUT>.
+Unit <radix_2_fft_9> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 8x256-bit single-port distributed Read Only RAM       : 2
+# MACs                                                 : 160
+ 8x8-to-12-bit MAC                                     : 160
+# Multipliers                                          : 160
+ 8x8-bit multiplier                                    : 160
+# Adders/Subtractors                                   : 320
+ 8-bit adder                                           : 160
+ 8-bit subtractor                                      : 160
+# Counters                                             : 1
+ 3-bit up counter                                      : 1
+# Registers                                            : 3072
+ Flip-Flops                                            : 3072
+# Comparators                                          : 1
+ 3-bit comparator lessequal                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <FFT_32> ...
+
+Optimizing unit <radix_2_fft_1> ...
+
+Optimizing unit <radix_2_fft_2> ...
+
+Optimizing unit <radix_2_fft_3> ...
+
+Optimizing unit <radix_2_fft_4> ...
+
+Optimizing unit <radix_2_fft_5> ...
+
+Optimizing unit <radix_2_fft_6> ...
+
+Optimizing unit <radix_2_fft_7> ...
+
+Optimizing unit <radix_2_fft_8> ...
+
+Optimizing unit <radix_2_fft_9> ...
+
+Optimizing unit <radix_2_fft_10> ...
+
+Optimizing unit <radix_2_fft_11> ...
+
+Optimizing unit <radix_2_fft_12> ...
+
+Optimizing unit <radix_2_fft_13> ...
+
+Optimizing unit <radix_2_fft_14> ...
+
+Optimizing unit <radix_2_fft_15> ...
+
+Optimizing unit <radix_2_fft_16> ...
+
+Optimizing unit <TopLevel> ...
+WARNING:Xst:1710 - FF/Latch <uut/X0_reg_r_31_125> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_126> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_129> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_133> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_137> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_141> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_142> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_143> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_151> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_160> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_161> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_166> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_170> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_179> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_211> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_212> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_216> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_219> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_228> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_232> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_9> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_11> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_15> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_16> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_46> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_47> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_50> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_54> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_55> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_56> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_60> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_63> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_67> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_83> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_87> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_98> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_99> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_100> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_106> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_107> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_120> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_141> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_142> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_149> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_150> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_151> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_155> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_161> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_162> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_179> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_180> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_192> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_209> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_212> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_219> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_229> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_235> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_242> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_248> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_250> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_254> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_234> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_235> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_248> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_r_31_249> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_9> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_11> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_12> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_19> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_35> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_44> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_46> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_47> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_60> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_61> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_67> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_91> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_99> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_102> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_120> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_125> (without init value) has a constant value of 1 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uut/X0_reg_i_31_131> (without init value) has a constant value of 0 in block <TopLevel>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_i_31_136> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_i_31_8> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_i_31_255> in Unit <TopLevel> is equivalent to the following 5 FFs/Latches, which will be removed : <uut/X0_reg_i_31_249> <uut/X0_reg_i_31_210> <uut/X0_reg_i_31_160> <uut/X0_reg_i_31_143> <uut/X0_reg_i_31_126> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_i_31_232> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_i_31_168> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_i_31_72> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_i_31_8> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_i_31_144> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_i_31_16> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_i_31_72> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_i_31_64> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_i_31_200> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_i_31_72> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_i_31_240> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_i_31_176> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_i_31_80> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_i_31_16> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_i_31_152> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_i_31_24> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_r_31_88> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_r_31_72> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_i_31_192> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_i_31_128> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_r_31_221> in Unit <TopLevel> is equivalent to the following 7 FFs/Latches, which will be removed : <uut/X0_reg_r_31_205> <uut/X0_reg_r_31_198> <uut/X0_reg_r_31_196> <uut/X0_reg_r_31_191> <uut/X0_reg_r_31_190> <uut/X0_reg_r_31_181> <uut/X0_reg_r_31_156> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_i_31_160> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_i_31_32> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_r_31_223> in Unit <TopLevel> is equivalent to the following 8 FFs/Latches, which will be removed : <uut/X0_reg_r_31_222> <uut/X0_reg_r_31_217> <uut/X0_reg_r_31_215> <uut/X0_reg_r_31_214> <uut/X0_reg_r_31_203> <uut/X0_reg_r_31_201> <uut/X0_reg_r_31_157> <uut/X0_reg_r_31_145> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_r_31_200> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_r_31_136> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_i_31_208> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_i_31_80> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_r_31_225> in Unit <TopLevel> is equivalent to the following 10 FFs/Latches, which will be removed : <uut/X0_reg_r_31_224> <uut/X0_reg_r_31_204> <uut/X0_reg_r_31_184> <uut/X0_reg_r_31_175> <uut/X0_reg_r_31_162> <uut/X0_reg_r_31_147> <uut/X0_reg_r_31_144> <uut/X0_reg_r_31_124> <uut/X0_reg_r_31_122> <uut/X0_reg_r_31_22> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_i_31_248> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_i_31_184> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_i_31_88> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_i_31_24> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_i_31_88> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_i_31_80> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_i_31_216> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_i_31_88> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_i_31_96> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_i_31_32> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_r_31_229> in Unit <TopLevel> is equivalent to the following 7 FFs/Latches, which will be removed : <uut/X0_reg_r_31_213> <uut/X0_reg_r_31_180> <uut/X0_reg_r_31_176> <uut/X0_reg_r_31_167> <uut/X0_reg_r_31_165> <uut/X0_reg_r_31_131> <uut/X0_reg_r_31_17> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_i_31_168> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_i_31_40> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_i_31_224> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_i_31_96> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_r_31_208> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_r_31_144> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_r_31_237> in Unit <TopLevel> is equivalent to the following 3 FFs/Latches, which will be removed : <uut/X0_reg_r_31_233> <uut/X0_reg_r_31_138> <uut/X0_reg_r_31_132> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_i_31_176> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_i_31_48> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_r_31_238> in Unit <TopLevel> is equivalent to the following 4 FFs/Latches, which will be removed : <uut/X0_reg_r_31_208> <uut/X0_reg_r_31_177> <uut/X0_reg_r_31_174> <uut/X0_reg_r_31_171> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_i_31_232> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_i_31_104> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_r_31_239> in Unit <TopLevel> is equivalent to the following 14 FFs/Latches, which will be removed : <uut/X0_reg_r_31_236> <uut/X0_reg_r_31_218> <uut/X0_reg_r_31_186> <uut/X0_reg_r_31_185> <uut/X0_reg_r_31_178> <uut/X0_reg_r_31_173> <uut/X0_reg_r_31_163> <uut/X0_reg_r_31_154> <uut/X0_reg_r_31_152> <uut/X0_reg_r_31_140> <uut/X0_reg_r_31_139> <uut/X0_reg_r_31_136> <uut/X0_reg_r_31_127> <uut/X0_reg_r_31_20> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_r_31_216> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_r_31_152> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_r_31_245> in Unit <TopLevel> is equivalent to the following 10 FFs/Latches, which will be removed : <uut/X0_reg_r_31_244> <uut/X0_reg_r_31_243> <uut/X0_reg_r_31_231> <uut/X0_reg_r_31_230> <uut/X0_reg_r_31_227> <uut/X0_reg_r_31_200> <uut/X0_reg_r_31_183> <uut/X0_reg_r_31_168> <uut/X0_reg_r_31_159> <uut/X0_reg_r_31_158> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_i_31_184> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_i_31_56> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_r_31_251> in Unit <TopLevel> is equivalent to the following 11 FFs/Latches, which will be removed : <uut/X0_reg_r_31_210> <uut/X0_reg_r_31_209> <uut/X0_reg_r_31_207> <uut/X0_reg_r_31_206> <uut/X0_reg_r_31_197> <uut/X0_reg_r_31_192> <uut/X0_reg_r_31_189> <uut/X0_reg_r_31_188> <uut/X0_reg_r_31_169> <uut/X0_reg_r_31_130> <uut/X0_reg_r_31_18> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_r_31_246> in Unit <TopLevel> is equivalent to the following 3 FFs/Latches, which will be removed : <uut/X0_reg_r_31_242> <uut/X0_reg_r_31_194> <uut/X0_reg_r_31_19> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_r_31_128> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_r_31_0> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_i_31_240> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_i_31_112> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_r_31_247> in Unit <TopLevel> is equivalent to the following 9 FFs/Latches, which will be removed : <uut/X0_reg_r_31_220> <uut/X0_reg_r_31_202> <uut/X0_reg_r_31_199> <uut/X0_reg_r_31_182> <uut/X0_reg_r_31_164> <uut/X0_reg_r_31_135> <uut/X0_reg_r_31_134> <uut/X0_reg_r_31_128> <uut/X0_reg_r_31_121> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_r_31_252> in Unit <TopLevel> is equivalent to the following 6 FFs/Latches, which will be removed : <uut/X0_reg_r_31_241> <uut/X0_reg_r_31_240> <uut/X0_reg_r_31_226> <uut/X0_reg_r_31_172> <uut/X0_reg_r_31_153> <uut/X0_reg_r_31_23> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_r_31_224> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_r_31_160> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_r_31_253> in Unit <TopLevel> is equivalent to the following 5 FFs/Latches, which will be removed : <uut/X0_reg_r_31_193> <uut/X0_reg_r_31_187> <uut/X0_reg_r_31_148> <uut/X0_reg_r_31_146> <uut/X0_reg_r_31_123> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_i_31_192> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_i_31_64> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_r_31_136> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_r_31_8> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_r_31_255> in Unit <TopLevel> is equivalent to the following 7 FFs/Latches, which will be removed : <uut/X0_reg_r_31_254> <uut/X0_reg_r_31_250> <uut/X0_reg_r_31_195> <uut/X0_reg_r_31_155> <uut/X0_reg_r_31_150> <uut/X0_reg_r_31_149> <uut/X0_reg_r_31_21> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_r_31_232> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_r_31_168> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_r_31_144> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_r_31_16> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_r_31_200> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_r_31_72> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_i_31_104> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_i_31_72> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_r_31_240> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_r_31_176> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_i_31_248> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_i_31_120> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_r_31_152> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_r_31_24> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_r_31_192> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_r_31_128> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_i_31_112> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_i_31_80> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_r_31_160> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_r_31_32> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_i_31_120> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_i_31_88> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_r_31_208> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_r_31_80> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_r_31_248> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_r_31_184> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_r_31_32> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_r_31_0> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_r_31_216> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_r_31_88> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_i_31_16> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_i_31_0> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_r_31_40> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_r_31_8> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_r_31_168> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_r_31_40> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_r_31_224> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_r_31_96> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_i_31_24> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_i_31_8> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_r_31_176> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_r_31_48> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_r_31_232> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_r_31_104> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_r_31_184> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_r_31_56> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_r_31_240> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_r_31_112> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_r_31_48> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_r_31_16> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_r_31_192> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_r_31_64> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_r_31_56> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_r_31_24> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_r_31_104> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_r_31_72> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_i_31_160> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_i_31_128> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_r_31_248> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_r_31_120> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_i_31_48> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_i_31_32> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_r_31_112> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_r_31_80> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_i_31_56> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_i_31_40> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_r_31_120> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_r_31_88> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_i_31_168> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_i_31_136> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_i_31_224> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_i_31_192> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_i_31_176> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_i_31_144> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_i_31_232> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_i_31_200> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_i_31_184> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_i_31_152> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_i_31_80> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_i_31_64> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_i_31_240> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_i_31_208> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_r_31_96> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_r_31_64> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_r_31_8> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_r_31_0> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_i_31_104> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_i_31_96> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_i_31_88> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_i_31_72> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_i_31_248> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_i_31_216> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_r_31_160> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_r_31_128> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_i_31_120> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_i_31_112> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_r_31_168> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_r_31_136> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_r_31_224> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_r_31_192> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_r_31_176> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_r_31_144> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_r_31_232> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_r_31_200> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_i_31_136> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_i_31_128> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_r_31_184> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_r_31_152> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_r_31_240> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_r_31_208> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_i_31_200> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_i_31_192> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_i_31_112> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_i_31_96> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_i_31_152> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_i_31_144> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_r_31_24> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_r_31_16> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_i_31_120> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_i_31_104> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_r_31_104> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_r_31_96> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_r_31_248> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_r_31_216> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_r_31_40> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_r_31_32> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_r_31_120> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_r_31_112> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_i_31_216> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_i_31_208> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_i_31_32> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_i_31_0> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_i_31_168> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_i_31_160> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_i_31_40> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_i_31_8> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_i_31_232> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_i_31_224> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_i_31_144> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_i_31_128> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_i_31_184> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_i_31_176> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_r_31_56> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_r_31_48> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_i_31_152> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_i_31_136> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_r_31_64> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_r_31_0> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_r_31_136> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_r_31_128> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_i_31_48> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_i_31_16> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_r_31_72> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_r_31_8> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_r_31_200> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_r_31_192> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_r_31_72> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_r_31_64> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_i_31_56> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_i_31_24> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_r_31_112> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_r_31_96> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_i_31_208> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_i_31_192> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_r_31_80> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_r_31_16> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_i_31_248> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_i_31_240> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_r_31_152> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_r_31_144> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_i_31_216> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_i_31_200> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_r_31_120> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_r_31_104> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_i_31_8> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_i_31_0> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_i_31_176> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_i_31_160> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_r_31_88> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_r_31_24> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_r_31_216> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_r_31_208> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_r_31_88> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_r_31_80> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_i_31_184> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_i_31_168> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_r_31_96> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_r_31_32> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_r_31_168> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_r_31_160> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_i_31_240> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_i_31_224> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_r_31_232> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_r_31_224> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_r_31_144> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_r_31_128> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_r_31_184> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_r_31_176> 
+INFO:Xst:2261 - The FF/Latch <uut/X3_reg_i_31_96> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X3_reg_i_31_64> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_r_31_152> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_r_31_136> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_i_31_248> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_i_31_232> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_r_31_208> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_r_31_192> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_r_31_248> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_r_31_240> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_r_31_216> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_r_31_200> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_i_31_104> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_i_31_40> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_r_31_176> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_r_31_160> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_i_31_112> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_i_31_48> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_r_31_184> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_r_31_168> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_r_31_16> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_r_31_0> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_i_31_120> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_i_31_56> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_r_31_240> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_r_31_224> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_r_31_24> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_r_31_8> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_r_31_248> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_r_31_232> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_i_31_24> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_i_31_16> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_i_31_215> in Unit <TopLevel> is equivalent to the following 7 FFs/Latches, which will be removed : <uut/X0_reg_i_31_214> <uut/X0_reg_i_31_186> <uut/X0_reg_i_31_185> <uut/X0_reg_i_31_163> <uut/X0_reg_i_31_157> <uut/X0_reg_i_31_156> <uut/X0_reg_i_31_139> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_i_31_218> in Unit <TopLevel> is equivalent to the following 9 FFs/Latches, which will be removed : <uut/X0_reg_i_31_217> <uut/X0_reg_i_31_205> <uut/X0_reg_i_31_203> <uut/X0_reg_i_31_198> <uut/X0_reg_i_31_196> <uut/X0_reg_i_31_191> <uut/X0_reg_i_31_190> <uut/X0_reg_i_31_181> <uut/X0_reg_i_31_152> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_i_31_200> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_i_31_136> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_i_31_224> in Unit <TopLevel> is equivalent to the following 6 FFs/Latches, which will be removed : <uut/X0_reg_i_31_208> <uut/X0_reg_i_31_184> <uut/X0_reg_i_31_175> <uut/X0_reg_i_31_174> <uut/X0_reg_i_31_171> <uut/X0_reg_i_31_170> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_r_31_48> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_r_31_32> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_i_31_40> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_i_31_32> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_r_31_56> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_r_31_40> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_r_31_104> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_r_31_40> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_i_31_234> in Unit <TopLevel> is equivalent to the following 7 FFs/Latches, which will be removed : <uut/X0_reg_i_31_228> <uut/X0_reg_i_31_213> <uut/X0_reg_i_31_204> <uut/X0_reg_i_31_176> <uut/X0_reg_i_31_144> <uut/X0_reg_i_31_133> <uut/X0_reg_i_31_122> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_i_31_241> in Unit <TopLevel> is equivalent to the following 6 FFs/Latches, which will be removed : <uut/X0_reg_i_31_237> <uut/X0_reg_i_31_202> <uut/X0_reg_i_31_200> <uut/X0_reg_i_31_172> <uut/X0_reg_i_31_168> <uut/X0_reg_i_31_153> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_r_31_112> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_r_31_48> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_i_31_208> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_i_31_144> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_i_31_238> in Unit <TopLevel> is equivalent to the following 10 FFs/Latches, which will be removed : <uut/X0_reg_i_31_232> <uut/X0_reg_i_31_225> <uut/X0_reg_i_31_211> <uut/X0_reg_i_31_177> <uut/X0_reg_i_31_167> <uut/X0_reg_i_31_166> <uut/X0_reg_i_31_165> <uut/X0_reg_i_31_147> <uut/X0_reg_i_31_129> <uut/X0_reg_i_31_124> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_i_31_239> in Unit <TopLevel> is equivalent to the following 7 FFs/Latches, which will be removed : <uut/X0_reg_i_31_221> <uut/X0_reg_i_31_178> <uut/X0_reg_i_31_154> <uut/X0_reg_i_31_148> <uut/X0_reg_i_31_140> <uut/X0_reg_i_31_136> <uut/X0_reg_i_31_127> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_r_31_120> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_r_31_56> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_i_31_245> in Unit <TopLevel> is equivalent to the following 10 FFs/Latches, which will be removed : <uut/X0_reg_i_31_244> <uut/X0_reg_i_31_231> <uut/X0_reg_i_31_230> <uut/X0_reg_i_31_227> <uut/X0_reg_i_31_226> <uut/X0_reg_i_31_199> <uut/X0_reg_i_31_183> <uut/X0_reg_i_31_182> <uut/X0_reg_i_31_135> <uut/X0_reg_i_31_134> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_i_31_216> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_i_31_152> 
+INFO:Xst:2261 - The FF/Latch <uut/X5_reg_i_31_128> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X5_reg_i_31_0> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_i_31_251> in Unit <TopLevel> is equivalent to the following 7 FFs/Latches, which will be removed : <uut/X0_reg_i_31_246> <uut/X0_reg_i_31_216> <uut/X0_reg_i_31_207> <uut/X0_reg_i_31_206> <uut/X0_reg_i_31_194> <uut/X0_reg_i_31_188> <uut/X0_reg_i_31_137> 
+INFO:Xst:2261 - The FF/Latch <uut/X1_reg_i_31_56> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X1_reg_i_31_48> 
+INFO:Xst:2261 - The FF/Latch <uut/X2_reg_r_31_80> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X2_reg_r_31_64> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_i_31_197> in Unit <TopLevel> is equivalent to the following 4 FFs/Latches, which will be removed : <uut/X0_reg_i_31_195> <uut/X0_reg_i_31_189> <uut/X0_reg_i_31_169> <uut/X0_reg_i_31_130> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_i_31_252> in Unit <TopLevel> is equivalent to the following 5 FFs/Latches, which will be removed : <uut/X0_reg_i_31_233> <uut/X0_reg_i_31_220> <uut/X0_reg_i_31_164> <uut/X0_reg_i_31_138> <uut/X0_reg_i_31_121> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_i_31_247> in Unit <TopLevel> is equivalent to the following 6 FFs/Latches, which will be removed : <uut/X0_reg_i_31_243> <uut/X0_reg_i_31_240> <uut/X0_reg_i_31_159> <uut/X0_reg_i_31_158> <uut/X0_reg_i_31_132> <uut/X0_reg_i_31_128> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_i_31_224> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_i_31_160> 
+INFO:Xst:2261 - The FF/Latch <uut/X0_reg_i_31_253> in Unit <TopLevel> is equivalent to the following 10 FFs/Latches, which will be removed : <uut/X0_reg_i_31_236> <uut/X0_reg_i_31_223> <uut/X0_reg_i_31_222> <uut/X0_reg_i_31_201> <uut/X0_reg_i_31_193> <uut/X0_reg_i_31_187> <uut/X0_reg_i_31_173> <uut/X0_reg_i_31_146> <uut/X0_reg_i_31_145> <uut/X0_reg_i_31_123> 
+INFO:Xst:2261 - The FF/Latch <uut/X4_reg_i_31_64> in Unit <TopLevel> is equivalent to the following FF/Latch, which will be removed : <uut/X4_reg_i_31_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TopLevel, actual ratio is 1.
+FlipFlop uut/X0_reg_i_31_238 has been replicated 1 time(s)
+FlipFlop uut/X0_reg_i_31_253 has been replicated 1 time(s)
+FlipFlop uut/X0_reg_r_31_247 has been replicated 1 time(s)
+FlipFlop uut/X0_reg_r_31_251 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 2435
+ Flip-Flops                                            : 2435
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TopLevel.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 7326
+#      GND                         : 1
+#      INV                         : 47
+#      LUT1                        : 38
+#      LUT2                        : 2488
+#      LUT3                        : 9
+#      LUT4                        : 12
+#      LUT5                        : 7
+#      LUT6                        : 90
+#      MUXCY                       : 2233
+#      VCC                         : 1
+#      XORCY                       : 2400
+# FlipFlops/Latches                : 2435
+#      FD                          : 2432
+#      FDRE                        : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 2
+#      IBUF                        : 1
+#      OBUF                        : 1
+# DSPs                             : 320
+#      DSP48E1                     : 320
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7z100ffg1156-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            2435  out of  554800     0%  
+ Number of Slice LUTs:                 2691  out of  277400     0%  
+    Number used as Logic:              2691  out of  277400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2703
+   Number with an unused Flip Flop:     268  out of   2703     9%  
+   Number with an unused LUT:            12  out of   2703     0%  
+   Number of fully used LUT-FF pairs:  2423  out of   2703    89%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                           3
+ Number of bonded IOBs:                   3  out of    400     0%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of DSP48E1s:                    320  out of   2020    15%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 2493  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 6.202ns (Maximum Frequency: 161.228MHz)
+   Minimum input arrival time before clock: 1.013ns
+   Maximum output required time after clock: 4.025ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.202ns (frequency: 161.228MHz)
+  Total number of paths / destination ports: 8288278 / 3296
+-------------------------------------------------------------------------
+Delay:               6.202ns (Levels of Logic = 11)
+  Source:            uut/X0_reg_r_31_239 (FF)
+  Destination:       uut/X1_reg_i_31_79 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: uut/X0_reg_r_31_239 to uut/X1_reg_i_31_79
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              50   0.236   0.472  uut/X0_reg_r_31_239 (uut/X0_reg_r_31_239)
+     DSP48E1:B4->PCOUT47    1   3.244   0.000  uut/UUT_0_11/mul/Mmult_n0021 (uut/UUT_0_11/mul/Mmult_n0021_PCOUT_to_mul/Maddsub_n0020_PCIN_47)
+     DSP48E1:PCIN47->P4    2   1.271   0.355  uut/UUT_0_11/mul/Maddsub_n0020 (uut/UUT_0_11/mul_imag<-4>)
+     LUT2:I1->O            1   0.043   0.000  uut/UUT_0_11/Msub_Y2_imag_lut<0> (uut/UUT_0_11/Msub_Y2_imag_lut<0>)
+     MUXCY:S->O            1   0.238   0.000  uut/UUT_0_11/Msub_Y2_imag_cy<0> (uut/UUT_0_11/Msub_Y2_imag_cy<0>)
+     MUXCY:CI->O           1   0.014   0.000  uut/UUT_0_11/Msub_Y2_imag_cy<1> (uut/UUT_0_11/Msub_Y2_imag_cy<1>)
+     MUXCY:CI->O           1   0.014   0.000  uut/UUT_0_11/Msub_Y2_imag_cy<2> (uut/UUT_0_11/Msub_Y2_imag_cy<2>)
+     MUXCY:CI->O           1   0.014   0.000  uut/UUT_0_11/Msub_Y2_imag_cy<3> (uut/UUT_0_11/Msub_Y2_imag_cy<3>)
+     MUXCY:CI->O           1   0.014   0.000  uut/UUT_0_11/Msub_Y2_imag_cy<4> (uut/UUT_0_11/Msub_Y2_imag_cy<4>)
+     MUXCY:CI->O           1   0.014   0.000  uut/UUT_0_11/Msub_Y2_imag_cy<5> (uut/UUT_0_11/Msub_Y2_imag_cy<5>)
+     MUXCY:CI->O           0   0.014   0.000  uut/UUT_0_11/Msub_Y2_imag_cy<6> (uut/UUT_0_11/Msub_Y2_imag_cy<6>)
+     XORCY:CI->O           1   0.262   0.000  uut/UUT_0_11/Msub_Y2_imag_xor<7> (uut/X1_i<23><3>)
+     FD:D                     -0.000          uut/X1_reg_i_31_71
+    ----------------------------------------
+    Total                      6.202ns (5.375ns logic, 0.827ns route)
+                                       (86.7% logic, 13.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              1.013ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       in_addr_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to in_addr_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.000   0.355  rst_IBUF (rst_IBUF)
+     LUT4:I3->O            3   0.043   0.351  _n005111 (_n0051)
+     FDRE:R                    0.264          in_addr_0
+    ----------------------------------------
+    Total                      1.013ns (0.307ns logic, 0.706ns route)
+                                       (30.3% logic, 69.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 512 / 1
+-------------------------------------------------------------------------
+Offset:              4.025ns (Levels of Logic = 8)
+  Source:            uut/X5_reg_i_31_187 (FF)
+  Destination:       rnd_bit (PAD)
+  Source Clock:      clk rising
+
+  Data Path: uut/X5_reg_i_31_187 to rnd_bit
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.236   0.613  uut/X5_reg_i_31_187 (uut/X5_reg_i_31_187)
+     LUT6:I0->O            1   0.043   0.522  rnd_bit1 (rnd_bit1)
+     LUT4:I0->O            1   0.043   0.350  rnd_bit5 (rnd_bit5)
+     LUT5:I4->O            1   0.043   0.350  rnd_bit10 (rnd_bit10)
+     LUT6:I5->O            1   0.043   0.350  rnd_bit20 (rnd_bit20)
+     LUT6:I5->O            1   0.043   0.350  rnd_bit40 (rnd_bit40)
+     LUT6:I5->O            1   0.043   0.613  rnd_bit54 (rnd_bit54)
+     LUT6:I0->O            1   0.043   0.339  rnd_bit108 (rnd_bit_OBUF)
+     OBUF:I->O                 0.000          rnd_bit_OBUF (rnd_bit)
+    ----------------------------------------
+    Total                      4.025ns (0.537ns logic, 3.488ns route)
+                                       (13.3% logic, 86.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.202|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 24.00 secs
+Total CPU time to Xst completion: 24.16 secs
+ 
+--> 
+
+Total memory usage is 394176 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   86 (   0 filtered)
+Number of infos    :  190 (   0 filtered)
+

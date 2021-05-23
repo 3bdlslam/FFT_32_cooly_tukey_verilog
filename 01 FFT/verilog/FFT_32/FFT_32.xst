@@ -1,7 +1,10 @@
-set -tmpdir "D:/projects/GithubRepositories/DigitalElectronics/01 FFT/verilog/FFT_32/xst/projnav.tmp"
-set -xsthdpdir "D:/projects/GithubRepositories/DigitalElectronics/01 FFT/verilog/FFT_32/xst"
-run -compileonly yes
--p xc7a100t-3-csg324
+set -tmpdir "xst/projnav.tmp"
+set -xsthdpdir "xst"
+run
+-ifn FFT_32.prj
+-ofn FFT_32
+-ofmt NGC
+-p xc7z100-2-ffg1156
 -top FFT_32
 -opt_mode Speed
 -opt_level 1
@@ -47,4 +50,3 @@ run -compileonly yes
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
--ifn FFT_32.prj

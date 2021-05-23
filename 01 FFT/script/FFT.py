@@ -113,8 +113,8 @@ def Layer0(N=32,C=[],file_path="FFT.v"):
         f.write(f"\n//Block Number:{i}\n")
         f.write(f"radix_2_fft\n" 
         f"#(.INT(INT), .DEC(DEC), .FACTOR({n}'b{C[0]}), .FACTOR_IMAG({n}'b{C[1]}))\n" 
-        f"UUT_0_{i}(.X1_real(X{l}_r[{j}]) , .X1_imag(X{l}_i[{j}]) , \n" 
-        f".X2_real(X{l}_r[{j+int(N/2)}]), .X2_imag(X{l}_i[{j+int(N/2)}]), \n" 
+        f"UUT_0_{i}(.X1_real(X{l}_reg_r[{j}]) , .X1_imag(X{l}_reg_i[{j}]) , \n" 
+        f".X2_real(X{l}_reg_r[{j+int(N/2)}]), .X2_imag(X{l}_reg_i[{j+int(N/2)}]), \n" 
         f".Y1_real(X{l+1}_r[{2*i}]) , .Y1_imag(X{l+1}_i[{2*i}]), \n"
         f".Y2_real(X{l+1}_r[{2*i+1}]) , .Y2_imag(X{l+1}_i[{2*i+1}]));\n"); 
     f.close()
@@ -127,17 +127,35 @@ def OtherLayers(Const=[[[]]], N=32,file_path="FFT.v"):
     for L in Layers:
         index=0
         f.write(f"""\n//######################### Layer:{L} #########################\n""")
-        for i in range(int(16/2**(L))):
+        for i in range(int((N/2)/2**(L))):
             for j in range(2**(L)):
                 index+=1
                 f.write(f"\n//Block Number:{index}\n")
                 f.write(f"radix_2_fft\n"
                 f"#(.INT(INT), .DEC(DEC),\n"
                 f".FACTOR({n}'b{Const[L][j][0]}), .FACTOR_IMAG({n}'b{Const[L][j][1]}))\n"
-                f"UUT_{L}_{index}(.X1_real(X{L}_r[{j+i*2**(L+1)}]) , .X1_imag(X{L}_i[{j+i*2**(L+1)}]) ,\n" 
-                f".X2_real(X{L}_r[{j+i*2**(L+1)+2**L}]), .X2_imag(X{L}_i[{j+i*2**(L+1)+2**L}]) ,\n" 
+                f"UUT_{L}_{index}(.X1_real(X{L}_reg_r[{j+i*2**(L+1)}]) , .X1_imag(X{L}_reg_i[{j+i*2**(L+1)}]) ,\n" 
+                f".X2_real(X{L}_reg_r[{j+i*2**(L+1)+2**L}]), .X2_imag(X{L}_reg_i[{j+i*2**(L+1)+2**L}]) ,\n" 
                 f".Y1_real(X{L+1}_r[{j+i*2**(L+1)}]) , .Y1_imag(X{L+1}_i[{j+i*2**(L+1)}]),\n" 
                 f".Y2_real(X{L+1}_r[{j+i*2**(L+1)+2**L}]) , .Y2_imag(X{L+1}_i[{j+i*2**(L+1)+2**L}]));\n")
+
+def reg(N=32,layers=5,file_path="FFT.v"):
+    """
+    assign register
+    """
+    f=open(file_path,'a')
+    f.write("always @ (posedge clk) begin ")
+    for L in range(layers+1):
+        for n in range(N):
+            f.write(write(f"""
+            X{L}_reg_i[{n}]<=X{L}_i[{n}];
+	        X{L}_reg_r[{n}]<=X{L}_r[{n}];
+            """))
+    f.write("\nend\n\n")
+    f.close()
+
+
+    return 
 
 def FFT(N=32,INT=4,DEC=4,file_path="FFT.v"):
     """
@@ -160,14 +178,15 @@ def FFT(N=32,INT=4,DEC=4,file_path="FFT.v"):
     
     for i in range(int(log2(N))+1):
         f.write(f"wire signed [INT-1:-DEC] X{i}_r [0:{N-1}] ,X{i}_i  [0:{N-1}];\n")
-    
+        f.write(f"reg  signed [INT-1:-DEC] X{i}_reg_r [0:{N-1}] ,X{i}_reg_i  [0:{N-1}];\n")
     f.write("\n\n")
 
-    t1=N*(INT+DEC)
+    bits=INT+DEC
+    t1=N*bits
     for i in range(N):
-        f.write(f"assign X0_r[{i}] =  Xn_vect_real[{t1-1}:{t1-8}];\n"
-        f"assign X0_i[{i}] =  Xn_vect_imag[{t1-1}:{t1-8}] ;\n")
-        t1-=(INT+DEC)
+        f.write(f"assign X0_r[{i}] =  Xn_vect_real[{t1-1}:{t1-bits}];\n"
+        f"assign X0_i[{i}] =  Xn_vect_imag[{t1-1}:{t1-bits}] ;\n")
+        t1-=bits
     
     f.write("\n\n")
     f.close()
@@ -182,11 +201,14 @@ def FFT(N=32,INT=4,DEC=4,file_path="FFT.v"):
 
     t1=N*(INT+DEC)
     for i in range(N):
-        f.write(f"assign Xk_vect_real[{t1-1}:{t1-(INT+DEC)}] = X{int(log2(N))}_r[{i}];\n"
-        f"assign Xk_vect_imag[{t1-1}:{t1-(INT+DEC)}] = X{int(log2(N))}_i[{i}] ;\n")
+        f.write(f"assign Xk_vect_real[{t1-1}:{t1-(INT+DEC)}] = X{int(log2(N))}_reg_r[{i}];\n"
+        f"assign Xk_vect_imag[{t1-1}:{t1-(INT+DEC)}] = X{int(log2(N))}_reg_i[{i}] ;\n")
         t1-=(INT+DEC)
     f.write("\n\n")
 
+    f.close()
+    reg(N=N,layers=int(log2(N)),file_path=file_path)
+    f=open(file_path,'a') 
     f.write("endmodule")
 
     f.close()

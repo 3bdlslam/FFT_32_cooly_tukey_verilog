@@ -159,14 +159,37 @@ def FFT_test(d,N=32,INT=4,DEC=4,file_path="FFT_test.v"):
     for i in d:#i=> list of complex
         C=Complex2R_I(i)
         f.write(f"/*{i}*/\n")
-        f.write(f"Xn_vect_real <= {size}'h{List2Hex(d=C[0],INT=INT,DEC=DEC)};\n"
-        f"Xn_vect_imag <= {size}'h{List2Hex(d=C[1],INT=INT,DEC=DEC)};\n"
-        "#100;\n\n")
-                
-    f.write("end\n\n"
-    "always @(Xn_vect_real,Xk_vect_imag)\n"
-    '$monitor("real=%h  imag=%h",Xk_vect_real,Xk_vect_imag);\n\n\n')
+        f.write("#10 clk<=0;\n")
+        f.write(f"Xn_vect_real = {size}'h{List2Hex(d=C[0],INT=INT,DEC=DEC)};\n"
+        f"Xn_vect_imag = {size}'h{List2Hex(d=C[1],INT=INT,DEC=DEC)};\n"
 
+        "#10 clk<=1;\n")
+                
+    internal_values=write("""
+    end\n\n
+    always @(Xn_vect_real,Xn_vect_imag)\n
+    $monitor("i0:%h  r0:%h \\n
+              i1:%h  r1:%h \\n 
+              i2:%h  r2:%h \\n
+              i3:%h  r3:%h \\n
+              i4:%h  r4:%h \\n
+              i5:%h  r5:%h \\n",
+        UUT.X0_reg_i,UUT.X0_reg_r,
+        UUT.X1_reg_i,UUT.X1_reg_r,
+        UUT.X2_reg_i,UUT.X2_reg_r,
+        UUT.X3_reg_i,UUT.X3_reg_r,
+        UUT.X4_reg_i,UUT.X4_reg_r,
+        UUT.X5_reg_i,UUT.X5_reg_r
+    );""")
+    IO_values='end\n\nalways @(Xn_vect_real,Xn_vect_imag)\n$monitor("input:\\nreal=%h  imag=%h\\noutput:\\nreal=%h  imag=%h",Xn_vect_real,Xn_vect_imag,Xk_vect_real,Xk_vect_imag);\n\n\n'
+
+    f.write(write(IO_values))
+
+    
+
+  
+    
+    
     results=np.fft.fft(d)
     f.write(f"//Expected output:\n")
     for i in results:
