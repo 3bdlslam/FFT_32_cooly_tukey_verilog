@@ -1,3 +1,0 @@
-verilog isim_temp "FFT_32.v"
-verilog isim_temp "complex_mul_test.v"
-verilog isim_temp "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,4 +1,0 @@
-verilog work "FFT_32.v"
-verilog work "TopLevel.v"
-verilog work "Test_TopLevel.v"
-verilog work "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

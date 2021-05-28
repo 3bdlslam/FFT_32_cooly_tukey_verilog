@@ -1,24 +1,28 @@
-from FFT import FFT
-from test import FFT_test,complex_mul_test,RandomBinary,Binary2Dec_Hex
-import numpy as np
-from fxpmath import Fxp
+from FFT import *
 
 INT=4
 DEC=4
 N=32
+MAC=2
+Th=0.2
+S=3
+FFT_path=f'Results\FFT.v'
+Test_FFT_path=f'Results\Test_FFT.v'
+FFT_path=r"D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT\FFT.v"
+Test_FFT_path=r"D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT\Test_FFT.v"
 
 
-FFT(N=N, INT=INT, DEC=DEC, file_path="FFT.v")
+f=write(FFT_path)
+ft=write(Test_FFT_path)
 
 
-complex_mul_test(d=RandomBinary(N=40,m=INT+DEC,INT=INT, DEC=DEC, Th=1),
-                INT=INT,DEC=DEC,
-                file_path="complex_mul_test.v")
 
-c=10
-d=RandomBinary(N=2*N*c,m=INT+DEC,INT=INT, DEC=DEC, Th=1).reshape([c,N,2])
-#[[0,1,2,31],]
-FFT_test(d=d,
-        N=N,INT=INT,DEC=DEC,
-        file_path="FFT_test.v")
+FFT(N,INT,DEC,MAC,f)
+
+Complex_Mul(INT,DEC,f)
+
+Radix_2_FFT(INT,DEC,f)
+
+FFT_test(S,N,INT,DEC,MAC,Th,ft)
+
 
