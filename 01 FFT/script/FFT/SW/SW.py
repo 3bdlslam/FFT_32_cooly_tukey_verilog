@@ -104,17 +104,10 @@ def RandomBinary(S,N,INT,DEC,Th):
     S=S*N*2
     Bits=INT+DEC
     Size=N*Bits
-    d=[]
-    count=0
-    while count<S:
-        s=''
-        for j in range(Bits):
-            s+=str(np.random.randint(0,2))
-        if abs(Fxp('0b'+s, True, INT+DEC, DEC)())<=Th:    
-            d.append(s)
-            count+=1
-    Data= np.array(d,dtype=object)
-
+    
+    Data= np.array(Fxp(list(np.random.random([S])),True,Bits,DEC).bin(),dtype=object)
+ 
+    
     t1=Fxp(list('0b'+Data),True,Bits,DEC).hex()
     t2=np.array(list(map(lambda x:x[2:],t1)))
     t3=t2.reshape([2,-1,N])

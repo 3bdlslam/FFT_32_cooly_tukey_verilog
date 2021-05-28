@@ -1,11 +1,12 @@
 from FFT import *
 
-INT=4
-DEC=4
+INT=8
+DEC=8
 N=32
-MAC=2
-Th=0.2
-S=3
+MAC=1
+Th=0.001
+
+S=10
 FFT_path=f'Results\FFT.v'
 Test_FFT_path=f'Results\Test_FFT.v'
 FFT_path=r"D:\projects\GithubRepositories\DigitalElectronics\01 FFT\verilog\FFT\FFT.v"
