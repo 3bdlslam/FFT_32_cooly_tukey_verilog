@@ -105,7 +105,7 @@ def RandomBinary(S,N,INT,DEC,Th):
     Bits=INT+DEC
     Size=N*Bits
     
-    Data= np.array(Fxp(list(np.random.random([S])),True,Bits,DEC).bin(),dtype=object)
+    Data= np.array(Fxp(list((np.random.random([S])-0.5)*2*Th),True,Bits,DEC).bin(),dtype=object)
  
     
     t1=Fxp(list('0b'+Data),True,Bits,DEC).hex()

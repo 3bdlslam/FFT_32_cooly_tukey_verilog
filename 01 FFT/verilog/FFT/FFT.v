@@ -1,81 +1,81 @@
 `timescale 1ns / 1ps
 
 module FFT
-(input [511:0] Xn_vect_real,Xn_vect_imag,
+(input [255:0] Xn_vect_real,Xn_vect_imag,
 input clk1,clk2,rst,
-output [511:0] Xk_vect_real,Xk_vect_imag);
+output [255:0] Xk_vect_real,Xk_vect_imag);
 
-wire signed [7:-8] X0 [0:31][0:1];
-wire signed [7:-8] MAC_out [0:0][0:1][0:1];
-reg  signed [7:-8] MAC_in  [0:0][0:2][0:1];
-reg  signed [7:-8] X_reg [0:5][0:31][0:1];
+wire signed [3:-4] X0 [0:31][0:1];
+wire signed [3:-4] MAC_out [0:0][0:1][0:1];
+reg  signed [3:-4] MAC_in  [0:0][0:2][0:1];
+reg  signed [3:-4] X_reg [0:5][0:31][0:1];
 reg  [6:0] Sel;
-reg  signed [7:-8] MAC_out_reg [0:4][0:31][0:1];
+reg  signed [3:-4] MAC_out_reg [0:4][0:31][0:1];
 
-assign X0[0][0]=Xn_vect_real[511:496];
-assign X0[0][1]=Xn_vect_imag[511:496];
-assign X0[1][0]=Xn_vect_real[255:240];
-assign X0[1][1]=Xn_vect_imag[255:240];
-assign X0[2][0]=Xn_vect_real[383:368];
-assign X0[2][1]=Xn_vect_imag[383:368];
-assign X0[3][0]=Xn_vect_real[127:112];
-assign X0[3][1]=Xn_vect_imag[127:112];
-assign X0[4][0]=Xn_vect_real[447:432];
-assign X0[4][1]=Xn_vect_imag[447:432];
-assign X0[5][0]=Xn_vect_real[191:176];
-assign X0[5][1]=Xn_vect_imag[191:176];
-assign X0[6][0]=Xn_vect_real[319:304];
-assign X0[6][1]=Xn_vect_imag[319:304];
-assign X0[7][0]=Xn_vect_real[63:48];
-assign X0[7][1]=Xn_vect_imag[63:48];
-assign X0[8][0]=Xn_vect_real[479:464];
-assign X0[8][1]=Xn_vect_imag[479:464];
-assign X0[9][0]=Xn_vect_real[223:208];
-assign X0[9][1]=Xn_vect_imag[223:208];
-assign X0[10][0]=Xn_vect_real[351:336];
-assign X0[10][1]=Xn_vect_imag[351:336];
-assign X0[11][0]=Xn_vect_real[95:80];
-assign X0[11][1]=Xn_vect_imag[95:80];
-assign X0[12][0]=Xn_vect_real[415:400];
-assign X0[12][1]=Xn_vect_imag[415:400];
-assign X0[13][0]=Xn_vect_real[159:144];
-assign X0[13][1]=Xn_vect_imag[159:144];
-assign X0[14][0]=Xn_vect_real[287:272];
-assign X0[14][1]=Xn_vect_imag[287:272];
-assign X0[15][0]=Xn_vect_real[31:16];
-assign X0[15][1]=Xn_vect_imag[31:16];
-assign X0[16][0]=Xn_vect_real[495:480];
-assign X0[16][1]=Xn_vect_imag[495:480];
-assign X0[17][0]=Xn_vect_real[239:224];
-assign X0[17][1]=Xn_vect_imag[239:224];
-assign X0[18][0]=Xn_vect_real[367:352];
-assign X0[18][1]=Xn_vect_imag[367:352];
-assign X0[19][0]=Xn_vect_real[111:96];
-assign X0[19][1]=Xn_vect_imag[111:96];
-assign X0[20][0]=Xn_vect_real[431:416];
-assign X0[20][1]=Xn_vect_imag[431:416];
-assign X0[21][0]=Xn_vect_real[175:160];
-assign X0[21][1]=Xn_vect_imag[175:160];
-assign X0[22][0]=Xn_vect_real[303:288];
-assign X0[22][1]=Xn_vect_imag[303:288];
-assign X0[23][0]=Xn_vect_real[47:32];
-assign X0[23][1]=Xn_vect_imag[47:32];
-assign X0[24][0]=Xn_vect_real[463:448];
-assign X0[24][1]=Xn_vect_imag[463:448];
-assign X0[25][0]=Xn_vect_real[207:192];
-assign X0[25][1]=Xn_vect_imag[207:192];
-assign X0[26][0]=Xn_vect_real[335:320];
-assign X0[26][1]=Xn_vect_imag[335:320];
-assign X0[27][0]=Xn_vect_real[79:64];
-assign X0[27][1]=Xn_vect_imag[79:64];
-assign X0[28][0]=Xn_vect_real[399:384];
-assign X0[28][1]=Xn_vect_imag[399:384];
-assign X0[29][0]=Xn_vect_real[143:128];
-assign X0[29][1]=Xn_vect_imag[143:128];
-assign X0[30][0]=Xn_vect_real[271:256];
-assign X0[30][1]=Xn_vect_imag[271:256];
-assign X0[31][0]=Xn_vect_real[15:0];
-assign X0[31][1]=Xn_vect_imag[15:0];
+assign X0[0][0]=Xn_vect_real[255:248];
+assign X0[0][1]=Xn_vect_imag[255:248];
+assign X0[1][0]=Xn_vect_real[127:120];
+assign X0[1][1]=Xn_vect_imag[127:120];
+assign X0[2][0]=Xn_vect_real[191:184];
+assign X0[2][1]=Xn_vect_imag[191:184];
+assign X0[3][0]=Xn_vect_real[63:56];
+assign X0[3][1]=Xn_vect_imag[63:56];
+assign X0[4][0]=Xn_vect_real[223:216];
+assign X0[4][1]=Xn_vect_imag[223:216];
+assign X0[5][0]=Xn_vect_real[95:88];
+assign X0[5][1]=Xn_vect_imag[95:88];
+assign X0[6][0]=Xn_vect_real[159:152];
+assign X0[6][1]=Xn_vect_imag[159:152];
+assign X0[7][0]=Xn_vect_real[31:24];
+assign X0[7][1]=Xn_vect_imag[31:24];
+assign X0[8][0]=Xn_vect_real[239:232];
+assign X0[8][1]=Xn_vect_imag[239:232];
+assign X0[9][0]=Xn_vect_real[111:104];
+assign X0[9][1]=Xn_vect_imag[111:104];
+assign X0[10][0]=Xn_vect_real[175:168];
+assign X0[10][1]=Xn_vect_imag[175:168];
+assign X0[11][0]=Xn_vect_real[47:40];
+assign X0[11][1]=Xn_vect_imag[47:40];
+assign X0[12][0]=Xn_vect_real[207:200];
+assign X0[12][1]=Xn_vect_imag[207:200];
+assign X0[13][0]=Xn_vect_real[79:72];
+assign X0[13][1]=Xn_vect_imag[79:72];
+assign X0[14][0]=Xn_vect_real[143:136];
+assign X0[14][1]=Xn_vect_imag[143:136];
+assign X0[15][0]=Xn_vect_real[15:8];
+assign X0[15][1]=Xn_vect_imag[15:8];
+assign X0[16][0]=Xn_vect_real[247:240];
+assign X0[16][1]=Xn_vect_imag[247:240];
+assign X0[17][0]=Xn_vect_real[119:112];
+assign X0[17][1]=Xn_vect_imag[119:112];
+assign X0[18][0]=Xn_vect_real[183:176];
+assign X0[18][1]=Xn_vect_imag[183:176];
+assign X0[19][0]=Xn_vect_real[55:48];
+assign X0[19][1]=Xn_vect_imag[55:48];
+assign X0[20][0]=Xn_vect_real[215:208];
+assign X0[20][1]=Xn_vect_imag[215:208];
+assign X0[21][0]=Xn_vect_real[87:80];
+assign X0[21][1]=Xn_vect_imag[87:80];
+assign X0[22][0]=Xn_vect_real[151:144];
+assign X0[22][1]=Xn_vect_imag[151:144];
+assign X0[23][0]=Xn_vect_real[23:16];
+assign X0[23][1]=Xn_vect_imag[23:16];
+assign X0[24][0]=Xn_vect_real[231:224];
+assign X0[24][1]=Xn_vect_imag[231:224];
+assign X0[25][0]=Xn_vect_real[103:96];
+assign X0[25][1]=Xn_vect_imag[103:96];
+assign X0[26][0]=Xn_vect_real[167:160];
+assign X0[26][1]=Xn_vect_imag[167:160];
+assign X0[27][0]=Xn_vect_real[39:32];
+assign X0[27][1]=Xn_vect_imag[39:32];
+assign X0[28][0]=Xn_vect_real[199:192];
+assign X0[28][1]=Xn_vect_imag[199:192];
+assign X0[29][0]=Xn_vect_real[71:64];
+assign X0[29][1]=Xn_vect_imag[71:64];
+assign X0[30][0]=Xn_vect_real[135:128];
+assign X0[30][1]=Xn_vect_imag[135:128];
+assign X0[31][0]=Xn_vect_real[7:0];
+assign X0[31][1]=Xn_vect_imag[7:0];
 
 radix_2_fft r2_0
 (MAC_in[0][0][0],MAC_in [0][0][1],
@@ -569,324 +569,324 @@ end
 
 always @(posedge clk1) begin
 if(Sel==0) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==1) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==2) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==3) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==4) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==5) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==6) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==7) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==8) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==9) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==10) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==11) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==12) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==13) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==14) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==15) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==16) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==17) begin
-MAC_in[0][2][0]<=16'b0000000000000000;
-MAC_in[0][2][1]<=16'b1111111100000000;
+MAC_in[0][2][0]<=8'b00000000;
+MAC_in[0][2][1]<=8'b11110000;
 end
 else if(Sel==18) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==19) begin
-MAC_in[0][2][0]<=16'b0000000000000000;
-MAC_in[0][2][1]<=16'b1111111100000000;
+MAC_in[0][2][0]<=8'b00000000;
+MAC_in[0][2][1]<=8'b11110000;
 end
 else if(Sel==20) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==21) begin
-MAC_in[0][2][0]<=16'b0000000000000000;
-MAC_in[0][2][1]<=16'b1111111100000000;
+MAC_in[0][2][0]<=8'b00000000;
+MAC_in[0][2][1]<=8'b11110000;
 end
 else if(Sel==22) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==23) begin
-MAC_in[0][2][0]<=16'b0000000000000000;
-MAC_in[0][2][1]<=16'b1111111100000000;
+MAC_in[0][2][0]<=8'b00000000;
+MAC_in[0][2][1]<=8'b11110000;
 end
 else if(Sel==24) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==25) begin
-MAC_in[0][2][0]<=16'b0000000000000000;
-MAC_in[0][2][1]<=16'b1111111100000000;
+MAC_in[0][2][0]<=8'b00000000;
+MAC_in[0][2][1]<=8'b11110000;
 end
 else if(Sel==26) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==27) begin
-MAC_in[0][2][0]<=16'b0000000000000000;
-MAC_in[0][2][1]<=16'b1111111100000000;
+MAC_in[0][2][0]<=8'b00000000;
+MAC_in[0][2][1]<=8'b11110000;
 end
 else if(Sel==28) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==29) begin
-MAC_in[0][2][0]<=16'b0000000000000000;
-MAC_in[0][2][1]<=16'b1111111100000000;
+MAC_in[0][2][0]<=8'b00000000;
+MAC_in[0][2][1]<=8'b11110000;
 end
 else if(Sel==30) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==31) begin
-MAC_in[0][2][0]<=16'b0000000000000000;
-MAC_in[0][2][1]<=16'b1111111100000000;
+MAC_in[0][2][0]<=8'b00000000;
+MAC_in[0][2][1]<=8'b11110000;
 end
 else if(Sel==32) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==33) begin
-MAC_in[0][2][0]<=16'b0000000010110101;
-MAC_in[0][2][1]<=16'b1111111101001011;
+MAC_in[0][2][0]<=8'b00001011;
+MAC_in[0][2][1]<=8'b11110101;
 end
 else if(Sel==34) begin
-MAC_in[0][2][0]<=16'b0000000000000000;
-MAC_in[0][2][1]<=16'b1111111100000000;
+MAC_in[0][2][0]<=8'b00000000;
+MAC_in[0][2][1]<=8'b11110000;
 end
 else if(Sel==35) begin
-MAC_in[0][2][0]<=16'b1111111101001011;
-MAC_in[0][2][1]<=16'b1111111101001011;
+MAC_in[0][2][0]<=8'b11110101;
+MAC_in[0][2][1]<=8'b11110101;
 end
 else if(Sel==36) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==37) begin
-MAC_in[0][2][0]<=16'b0000000010110101;
-MAC_in[0][2][1]<=16'b1111111101001011;
+MAC_in[0][2][0]<=8'b00001011;
+MAC_in[0][2][1]<=8'b11110101;
 end
 else if(Sel==38) begin
-MAC_in[0][2][0]<=16'b0000000000000000;
-MAC_in[0][2][1]<=16'b1111111100000000;
+MAC_in[0][2][0]<=8'b00000000;
+MAC_in[0][2][1]<=8'b11110000;
 end
 else if(Sel==39) begin
-MAC_in[0][2][0]<=16'b1111111101001011;
-MAC_in[0][2][1]<=16'b1111111101001011;
+MAC_in[0][2][0]<=8'b11110101;
+MAC_in[0][2][1]<=8'b11110101;
 end
 else if(Sel==40) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==41) begin
-MAC_in[0][2][0]<=16'b0000000010110101;
-MAC_in[0][2][1]<=16'b1111111101001011;
+MAC_in[0][2][0]<=8'b00001011;
+MAC_in[0][2][1]<=8'b11110101;
 end
 else if(Sel==42) begin
-MAC_in[0][2][0]<=16'b0000000000000000;
-MAC_in[0][2][1]<=16'b1111111100000000;
+MAC_in[0][2][0]<=8'b00000000;
+MAC_in[0][2][1]<=8'b11110000;
 end
 else if(Sel==43) begin
-MAC_in[0][2][0]<=16'b1111111101001011;
-MAC_in[0][2][1]<=16'b1111111101001011;
+MAC_in[0][2][0]<=8'b11110101;
+MAC_in[0][2][1]<=8'b11110101;
 end
 else if(Sel==44) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==45) begin
-MAC_in[0][2][0]<=16'b0000000010110101;
-MAC_in[0][2][1]<=16'b1111111101001011;
+MAC_in[0][2][0]<=8'b00001011;
+MAC_in[0][2][1]<=8'b11110101;
 end
 else if(Sel==46) begin
-MAC_in[0][2][0]<=16'b0000000000000000;
-MAC_in[0][2][1]<=16'b1111111100000000;
+MAC_in[0][2][0]<=8'b00000000;
+MAC_in[0][2][1]<=8'b11110000;
 end
 else if(Sel==47) begin
-MAC_in[0][2][0]<=16'b1111111101001011;
-MAC_in[0][2][1]<=16'b1111111101001011;
+MAC_in[0][2][0]<=8'b11110101;
+MAC_in[0][2][1]<=8'b11110101;
 end
 else if(Sel==48) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==49) begin
-MAC_in[0][2][0]<=16'b0000000011101100;
-MAC_in[0][2][1]<=16'b1111111110011111;
+MAC_in[0][2][0]<=8'b00001110;
+MAC_in[0][2][1]<=8'b11111010;
 end
 else if(Sel==50) begin
-MAC_in[0][2][0]<=16'b0000000010110101;
-MAC_in[0][2][1]<=16'b1111111101001011;
+MAC_in[0][2][0]<=8'b00001011;
+MAC_in[0][2][1]<=8'b11110101;
 end
 else if(Sel==51) begin
-MAC_in[0][2][0]<=16'b0000000001100001;
-MAC_in[0][2][1]<=16'b1111111100010100;
+MAC_in[0][2][0]<=8'b00000110;
+MAC_in[0][2][1]<=8'b11110010;
 end
 else if(Sel==52) begin
-MAC_in[0][2][0]<=16'b0000000000000000;
-MAC_in[0][2][1]<=16'b1111111100000000;
+MAC_in[0][2][0]<=8'b00000000;
+MAC_in[0][2][1]<=8'b11110000;
 end
 else if(Sel==53) begin
-MAC_in[0][2][0]<=16'b1111111110011111;
-MAC_in[0][2][1]<=16'b1111111100010100;
+MAC_in[0][2][0]<=8'b11111010;
+MAC_in[0][2][1]<=8'b11110010;
 end
 else if(Sel==54) begin
-MAC_in[0][2][0]<=16'b1111111101001011;
-MAC_in[0][2][1]<=16'b1111111101001011;
+MAC_in[0][2][0]<=8'b11110101;
+MAC_in[0][2][1]<=8'b11110101;
 end
 else if(Sel==55) begin
-MAC_in[0][2][0]<=16'b1111111100010100;
-MAC_in[0][2][1]<=16'b1111111110011111;
+MAC_in[0][2][0]<=8'b11110010;
+MAC_in[0][2][1]<=8'b11111010;
 end
 else if(Sel==56) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==57) begin
-MAC_in[0][2][0]<=16'b0000000011101100;
-MAC_in[0][2][1]<=16'b1111111110011111;
+MAC_in[0][2][0]<=8'b00001110;
+MAC_in[0][2][1]<=8'b11111010;
 end
 else if(Sel==58) begin
-MAC_in[0][2][0]<=16'b0000000010110101;
-MAC_in[0][2][1]<=16'b1111111101001011;
+MAC_in[0][2][0]<=8'b00001011;
+MAC_in[0][2][1]<=8'b11110101;
 end
 else if(Sel==59) begin
-MAC_in[0][2][0]<=16'b0000000001100001;
-MAC_in[0][2][1]<=16'b1111111100010100;
+MAC_in[0][2][0]<=8'b00000110;
+MAC_in[0][2][1]<=8'b11110010;
 end
 else if(Sel==60) begin
-MAC_in[0][2][0]<=16'b0000000000000000;
-MAC_in[0][2][1]<=16'b1111111100000000;
+MAC_in[0][2][0]<=8'b00000000;
+MAC_in[0][2][1]<=8'b11110000;
 end
 else if(Sel==61) begin
-MAC_in[0][2][0]<=16'b1111111110011111;
-MAC_in[0][2][1]<=16'b1111111100010100;
+MAC_in[0][2][0]<=8'b11111010;
+MAC_in[0][2][1]<=8'b11110010;
 end
 else if(Sel==62) begin
-MAC_in[0][2][0]<=16'b1111111101001011;
-MAC_in[0][2][1]<=16'b1111111101001011;
+MAC_in[0][2][0]<=8'b11110101;
+MAC_in[0][2][1]<=8'b11110101;
 end
 else if(Sel==63) begin
-MAC_in[0][2][0]<=16'b1111111100010100;
-MAC_in[0][2][1]<=16'b1111111110011111;
+MAC_in[0][2][0]<=8'b11110010;
+MAC_in[0][2][1]<=8'b11111010;
 end
 else if(Sel==64) begin
-MAC_in[0][2][0]<=16'b0000000100000000;
-MAC_in[0][2][1]<=16'b0000000000000000;
+MAC_in[0][2][0]<=8'b00010000;
+MAC_in[0][2][1]<=8'b00000000;
 end
 else if(Sel==65) begin
-MAC_in[0][2][0]<=16'b0000000011111011;
-MAC_in[0][2][1]<=16'b1111111111001111;
+MAC_in[0][2][0]<=8'b00001111;
+MAC_in[0][2][1]<=8'b11111101;
 end
 else if(Sel==66) begin
-MAC_in[0][2][0]<=16'b0000000011101100;
-MAC_in[0][2][1]<=16'b1111111110011111;
+MAC_in[0][2][0]<=8'b00001110;
+MAC_in[0][2][1]<=8'b11111010;
 end
 else if(Sel==67) begin
-MAC_in[0][2][0]<=16'b0000000011010100;
-MAC_in[0][2][1]<=16'b1111111101110010;
+MAC_in[0][2][0]<=8'b00001101;
+MAC_in[0][2][1]<=8'b11111000;
 end
 else if(Sel==68) begin
-MAC_in[0][2][0]<=16'b0000000010110101;
-MAC_in[0][2][1]<=16'b1111111101001011;
+MAC_in[0][2][0]<=8'b00001011;
+MAC_in[0][2][1]<=8'b11110101;
 end
 else if(Sel==69) begin
-MAC_in[0][2][0]<=16'b0000000010001110;
-MAC_in[0][2][1]<=16'b1111111100101100;
+MAC_in[0][2][0]<=8'b00001000;
+MAC_in[0][2][1]<=8'b11110011;
 end
 else if(Sel==70) begin
-MAC_in[0][2][0]<=16'b0000000001100001;
-MAC_in[0][2][1]<=16'b1111111100010100;
+MAC_in[0][2][0]<=8'b00000110;
+MAC_in[0][2][1]<=8'b11110010;
 end
 else if(Sel==71) begin
-MAC_in[0][2][0]<=16'b0000000000110001;
-MAC_in[0][2][1]<=16'b1111111100000101;
+MAC_in[0][2][0]<=8'b00000011;
+MAC_in[0][2][1]<=8'b11110001;
 end
 else if(Sel==72) begin
-MAC_in[0][2][0]<=16'b0000000000000000;
-MAC_in[0][2][1]<=16'b1111111100000000;
+MAC_in[0][2][0]<=8'b00000000;
+MAC_in[0][2][1]<=8'b11110000;
 end
 else if(Sel==73) begin
-MAC_in[0][2][0]<=16'b1111111111001111;
-MAC_in[0][2][1]<=16'b1111111100000101;
+MAC_in[0][2][0]<=8'b11111101;
+MAC_in[0][2][1]<=8'b11110001;
 end
 else if(Sel==74) begin
-MAC_in[0][2][0]<=16'b1111111110011111;
-MAC_in[0][2][1]<=16'b1111111100010100;
+MAC_in[0][2][0]<=8'b11111010;
+MAC_in[0][2][1]<=8'b11110010;
 end
 else if(Sel==75) begin
-MAC_in[0][2][0]<=16'b1111111101110010;
-MAC_in[0][2][1]<=16'b1111111100101100;
+MAC_in[0][2][0]<=8'b11111000;
+MAC_in[0][2][1]<=8'b11110011;
 end
 else if(Sel==76) begin
-MAC_in[0][2][0]<=16'b1111111101001011;
-MAC_in[0][2][1]<=16'b1111111101001011;
+MAC_in[0][2][0]<=8'b11110101;
+MAC_in[0][2][1]<=8'b11110101;
 end
 else if(Sel==77) begin
-MAC_in[0][2][0]<=16'b1111111100101100;
-MAC_in[0][2][1]<=16'b1111111101110010;
+MAC_in[0][2][0]<=8'b11110011;
+MAC_in[0][2][1]<=8'b11111000;
 end
 else if(Sel==78) begin
-MAC_in[0][2][0]<=16'b1111111100010100;
-MAC_in[0][2][1]<=16'b1111111110011111;
+MAC_in[0][2][0]<=8'b11110010;
+MAC_in[0][2][1]<=8'b11111010;
 end
 else begin
-MAC_in[0][2][0]<=16'b1111111100000101;
-MAC_in[0][2][1]<=16'b1111111111001111;
+MAC_in[0][2][0]<=8'b11110001;
+MAC_in[0][2][1]<=8'b11111101;
 end
 end
 
@@ -1766,92 +1766,92 @@ Sel<=0;
 else
 Sel<=Sel+1;
 
-assign Xk_vect_real[511:496]=X_reg[5][0][0];
-assign Xk_vect_imag[511:496]=X_reg[5][0][1];
-assign Xk_vect_real[495:480]=X_reg[5][1][0];
-assign Xk_vect_imag[495:480]=X_reg[5][1][1];
-assign Xk_vect_real[479:464]=X_reg[5][2][0];
-assign Xk_vect_imag[479:464]=X_reg[5][2][1];
-assign Xk_vect_real[463:448]=X_reg[5][3][0];
-assign Xk_vect_imag[463:448]=X_reg[5][3][1];
-assign Xk_vect_real[447:432]=X_reg[5][4][0];
-assign Xk_vect_imag[447:432]=X_reg[5][4][1];
-assign Xk_vect_real[431:416]=X_reg[5][5][0];
-assign Xk_vect_imag[431:416]=X_reg[5][5][1];
-assign Xk_vect_real[415:400]=X_reg[5][6][0];
-assign Xk_vect_imag[415:400]=X_reg[5][6][1];
-assign Xk_vect_real[399:384]=X_reg[5][7][0];
-assign Xk_vect_imag[399:384]=X_reg[5][7][1];
-assign Xk_vect_real[383:368]=X_reg[5][8][0];
-assign Xk_vect_imag[383:368]=X_reg[5][8][1];
-assign Xk_vect_real[367:352]=X_reg[5][9][0];
-assign Xk_vect_imag[367:352]=X_reg[5][9][1];
-assign Xk_vect_real[351:336]=X_reg[5][10][0];
-assign Xk_vect_imag[351:336]=X_reg[5][10][1];
-assign Xk_vect_real[335:320]=X_reg[5][11][0];
-assign Xk_vect_imag[335:320]=X_reg[5][11][1];
-assign Xk_vect_real[319:304]=X_reg[5][12][0];
-assign Xk_vect_imag[319:304]=X_reg[5][12][1];
-assign Xk_vect_real[303:288]=X_reg[5][13][0];
-assign Xk_vect_imag[303:288]=X_reg[5][13][1];
-assign Xk_vect_real[287:272]=X_reg[5][14][0];
-assign Xk_vect_imag[287:272]=X_reg[5][14][1];
-assign Xk_vect_real[271:256]=X_reg[5][15][0];
-assign Xk_vect_imag[271:256]=X_reg[5][15][1];
-assign Xk_vect_real[255:240]=X_reg[5][16][0];
-assign Xk_vect_imag[255:240]=X_reg[5][16][1];
-assign Xk_vect_real[239:224]=X_reg[5][17][0];
-assign Xk_vect_imag[239:224]=X_reg[5][17][1];
-assign Xk_vect_real[223:208]=X_reg[5][18][0];
-assign Xk_vect_imag[223:208]=X_reg[5][18][1];
-assign Xk_vect_real[207:192]=X_reg[5][19][0];
-assign Xk_vect_imag[207:192]=X_reg[5][19][1];
-assign Xk_vect_real[191:176]=X_reg[5][20][0];
-assign Xk_vect_imag[191:176]=X_reg[5][20][1];
-assign Xk_vect_real[175:160]=X_reg[5][21][0];
-assign Xk_vect_imag[175:160]=X_reg[5][21][1];
-assign Xk_vect_real[159:144]=X_reg[5][22][0];
-assign Xk_vect_imag[159:144]=X_reg[5][22][1];
-assign Xk_vect_real[143:128]=X_reg[5][23][0];
-assign Xk_vect_imag[143:128]=X_reg[5][23][1];
-assign Xk_vect_real[127:112]=X_reg[5][24][0];
-assign Xk_vect_imag[127:112]=X_reg[5][24][1];
-assign Xk_vect_real[111:96]=X_reg[5][25][0];
-assign Xk_vect_imag[111:96]=X_reg[5][25][1];
-assign Xk_vect_real[95:80]=X_reg[5][26][0];
-assign Xk_vect_imag[95:80]=X_reg[5][26][1];
-assign Xk_vect_real[79:64]=X_reg[5][27][0];
-assign Xk_vect_imag[79:64]=X_reg[5][27][1];
-assign Xk_vect_real[63:48]=X_reg[5][28][0];
-assign Xk_vect_imag[63:48]=X_reg[5][28][1];
-assign Xk_vect_real[47:32]=X_reg[5][29][0];
-assign Xk_vect_imag[47:32]=X_reg[5][29][1];
-assign Xk_vect_real[31:16]=X_reg[5][30][0];
-assign Xk_vect_imag[31:16]=X_reg[5][30][1];
-assign Xk_vect_real[15:0]=X_reg[5][31][0];
-assign Xk_vect_imag[15:0]=X_reg[5][31][1];
+assign Xk_vect_real[255:248]=X_reg[5][0][0];
+assign Xk_vect_imag[255:248]=X_reg[5][0][1];
+assign Xk_vect_real[247:240]=X_reg[5][1][0];
+assign Xk_vect_imag[247:240]=X_reg[5][1][1];
+assign Xk_vect_real[239:232]=X_reg[5][2][0];
+assign Xk_vect_imag[239:232]=X_reg[5][2][1];
+assign Xk_vect_real[231:224]=X_reg[5][3][0];
+assign Xk_vect_imag[231:224]=X_reg[5][3][1];
+assign Xk_vect_real[223:216]=X_reg[5][4][0];
+assign Xk_vect_imag[223:216]=X_reg[5][4][1];
+assign Xk_vect_real[215:208]=X_reg[5][5][0];
+assign Xk_vect_imag[215:208]=X_reg[5][5][1];
+assign Xk_vect_real[207:200]=X_reg[5][6][0];
+assign Xk_vect_imag[207:200]=X_reg[5][6][1];
+assign Xk_vect_real[199:192]=X_reg[5][7][0];
+assign Xk_vect_imag[199:192]=X_reg[5][7][1];
+assign Xk_vect_real[191:184]=X_reg[5][8][0];
+assign Xk_vect_imag[191:184]=X_reg[5][8][1];
+assign Xk_vect_real[183:176]=X_reg[5][9][0];
+assign Xk_vect_imag[183:176]=X_reg[5][9][1];
+assign Xk_vect_real[175:168]=X_reg[5][10][0];
+assign Xk_vect_imag[175:168]=X_reg[5][10][1];
+assign Xk_vect_real[167:160]=X_reg[5][11][0];
+assign Xk_vect_imag[167:160]=X_reg[5][11][1];
+assign Xk_vect_real[159:152]=X_reg[5][12][0];
+assign Xk_vect_imag[159:152]=X_reg[5][12][1];
+assign Xk_vect_real[151:144]=X_reg[5][13][0];
+assign Xk_vect_imag[151:144]=X_reg[5][13][1];
+assign Xk_vect_real[143:136]=X_reg[5][14][0];
+assign Xk_vect_imag[143:136]=X_reg[5][14][1];
+assign Xk_vect_real[135:128]=X_reg[5][15][0];
+assign Xk_vect_imag[135:128]=X_reg[5][15][1];
+assign Xk_vect_real[127:120]=X_reg[5][16][0];
+assign Xk_vect_imag[127:120]=X_reg[5][16][1];
+assign Xk_vect_real[119:112]=X_reg[5][17][0];
+assign Xk_vect_imag[119:112]=X_reg[5][17][1];
+assign Xk_vect_real[111:104]=X_reg[5][18][0];
+assign Xk_vect_imag[111:104]=X_reg[5][18][1];
+assign Xk_vect_real[103:96]=X_reg[5][19][0];
+assign Xk_vect_imag[103:96]=X_reg[5][19][1];
+assign Xk_vect_real[95:88]=X_reg[5][20][0];
+assign Xk_vect_imag[95:88]=X_reg[5][20][1];
+assign Xk_vect_real[87:80]=X_reg[5][21][0];
+assign Xk_vect_imag[87:80]=X_reg[5][21][1];
+assign Xk_vect_real[79:72]=X_reg[5][22][0];
+assign Xk_vect_imag[79:72]=X_reg[5][22][1];
+assign Xk_vect_real[71:64]=X_reg[5][23][0];
+assign Xk_vect_imag[71:64]=X_reg[5][23][1];
+assign Xk_vect_real[63:56]=X_reg[5][24][0];
+assign Xk_vect_imag[63:56]=X_reg[5][24][1];
+assign Xk_vect_real[55:48]=X_reg[5][25][0];
+assign Xk_vect_imag[55:48]=X_reg[5][25][1];
+assign Xk_vect_real[47:40]=X_reg[5][26][0];
+assign Xk_vect_imag[47:40]=X_reg[5][26][1];
+assign Xk_vect_real[39:32]=X_reg[5][27][0];
+assign Xk_vect_imag[39:32]=X_reg[5][27][1];
+assign Xk_vect_real[31:24]=X_reg[5][28][0];
+assign Xk_vect_imag[31:24]=X_reg[5][28][1];
+assign Xk_vect_real[23:16]=X_reg[5][29][0];
+assign Xk_vect_imag[23:16]=X_reg[5][29][1];
+assign Xk_vect_real[15:8]=X_reg[5][30][0];
+assign Xk_vect_imag[15:8]=X_reg[5][30][1];
+assign Xk_vect_real[7:0]=X_reg[5][31][0];
+assign Xk_vect_imag[7:0]=X_reg[5][31][1];
 
 endmodule
 `timescale 1ns / 1ps
 
 module complex_mul
-(input signed  [7:-8] in1r,in1j,in2r,in2j,
-output signed  [7:-8] outr,outj);
+(input signed  [3:-4] in1r,in1j,in2r,in2j,
+output signed  [3:-4] outr,outj);
 
-wire signed [15:-16] real_ =(in1r*in2r)-(in1j*in2j);
-wire signed [15:-16] img_  =(in1j*in2r)+(in1r*in2j);
+wire signed [7:-8] real_ =(in1r*in2r)-(in1j*in2j);
+wire signed [7:-8] img_  =(in1j*in2r)+(in1r*in2j);
 
-assign outr  =real_[7:-8];
-assign outj  =img_ [7:-8];
+assign outr  =real_[3:-4];
+assign outj  =img_ [3:-4];
 
 endmodule
 `timescale 1ns / 1ps
 
 module radix_2_fft
-(input signed [7:-8] X1_real,X1_imag,X2_real,X2_imag,const_real,const_imag,
-output signed [7:-8] Y1_real,Y1_imag,Y2_real,Y2_imag);
+(input signed [3:-4] X1_real,X1_imag,X2_real,X2_imag,const_real,const_imag,
+output signed [3:-4] Y1_real,Y1_imag,Y2_real,Y2_imag);
 
-wire signed   [7:-8] mul_real,mul_imag;
+wire signed   [3:-4] mul_real,mul_imag;
 
 complex_mul mul(X2_real,X2_imag,const_real,const_imag,mul_real,mul_imag);
 
