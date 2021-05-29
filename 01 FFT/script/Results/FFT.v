@@ -1760,7 +1760,6 @@ X_reg[5][31][0]<=MAC_out_reg[4][31][0];
 X_reg[5][31][1]<=MAC_out_reg[4][31][1];
 end
 
-
 always @(posedge clk1,posedge rst)
 if(rst||Sel==79)
 Sel<=0;
