@@ -1,0 +1,19 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto b3dae5f5f91247c3ad1c2d8184ab2c10 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Test_FFT_behav xil_defaultlib.Test_FFT xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.complex_mul
+Compiling module xil_defaultlib.radix_2_fft
+Compiling module xil_defaultlib.FFT
+Compiling module xil_defaultlib.Test_FFT
+WARNING: [XSIM 43-3373] "D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.srcs/sim_1/new/fft_tp.v" Line 33. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.srcs/sim_1/new/fft_tp.v" Line 34. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.srcs/sim_1/new/fft_tp.v" Line 44. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.srcs/sim_1/new/fft_tp.v" Line 45. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Test_FFT_behav

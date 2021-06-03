@@ -1,0 +1,294 @@
+
+*** Running vivado
+    with args -log FFT.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source FFT.tcl -notrace
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source FFT.tcl -notrace
+Command: open_checkpoint D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.runs/impl_1/FFT.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 295.422 ; gain = 0.000
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 852 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1389.797 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2019.1 (64-bit) build 2552052
+open_checkpoint: Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 1389.797 ; gain = 1094.375
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1410.754 ; gain = 16.980
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: 13ea913bd
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.096 . Memory (MB): peak = 1410.754 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: da31bbef
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1527.543 ; gain = 0.027
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 36 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: f04ac201
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1527.543 ; gain = 0.027
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1386d9cec
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1527.543 ; gain = 0.027
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 1386d9cec
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1527.543 ; gain = 0.027
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 1386d9cec
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1527.543 ; gain = 0.027
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 1386d9cec
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1527.543 ; gain = 0.027
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |              36  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1527.543 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 23987c89
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1527.543 ; gain = 0.027
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 23987c89
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 1527.543 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 23987c89
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1527.543 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1527.543 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 23987c89
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1527.543 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+27 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1527.543 ; gain = 137.746
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1527.543 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint 'D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.runs/impl_1/FFT_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file FFT_drc_opted.rpt -pb FFT_drc_opted.pb -rpx FFT_drc_opted.rpx
+Command: report_drc -file FFT_drc_opted.rpt -pb FFT_drc_opted.pb -rpx FFT_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/xilinx/Vivado/2019.1/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.runs/impl_1/FFT_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1527.543 ; gain = 0.000
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1527.543 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 0e9777ec
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1527.543 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1527.543 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+ERROR: [Place 30-415] IO Placement failed due to overutilization. This design contains 1026 I/O ports
+ while the target  device: 7z020 package: clg400, contains only 255 available user I/O. The target device has 255 usable I/O pins of which 0 are already occupied by user-locked I/Os.
+ To rectify this issue:
+ 1. Ensure you are targeting the correct device and package.  Select a larger device or different package if necessary.
+ 2. Check the top-level ports of the design to ensure the correct number of ports are specified.
+ 3. Consider design changes to reduce the number of I/Os necessary.
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk2' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.srcs/constrs_1/new/top.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[0]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[100]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[101]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[102]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[103]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[104]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[105]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[106]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[107]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[108]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[109]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[10]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[110]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[111]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[112]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[113]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[114]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[115]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[116]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[117]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[118]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[119]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[11]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[120]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[121]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[122]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[123]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[124]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[125]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[126]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[127]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[128]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[129]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[12]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[130]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[131]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[132]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[133]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[134]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[135]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[136]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[137]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[138]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[139]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[13]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[140]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[141]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[142]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[143]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[144]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[145]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[146]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[147]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[148]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[149]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[14]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[150]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[151]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[152]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[153]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[154]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[155]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[156]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[157]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[158]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[159]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[15]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[160]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[161]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[162]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[163]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[164]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[165]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[166]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[167]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[168]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[169]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[16]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[170]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[171]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[172]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[173]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[174]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[175]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[176]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[177]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[178]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[179]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[17]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[180]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[181]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[182]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[183]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[184]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[185]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[186]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[187]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[188]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[189]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance Xk_vect_imag_OBUF[18]_inst (OBUF) is not placed
+INFO: [Common 17-14] Message 'Place 30-68' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 01a1bb9a
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1527.543 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 01a1bb9a
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1527.543 ; gain = 0.000
+ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: 01a1bb9a
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1527.543 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+47 Infos, 0 Warnings, 0 Critical Warnings and 103 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  3 13:47:21 2021...

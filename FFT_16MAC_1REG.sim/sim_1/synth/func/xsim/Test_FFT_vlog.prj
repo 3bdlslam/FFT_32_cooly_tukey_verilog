@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"Test_FFT_func_synth.v" \
+"../../../../../FFT_16MAC_1REG.srcs/sim_1/new/fft_tp.v" \
+
+# Do not sort compile order
+nosort

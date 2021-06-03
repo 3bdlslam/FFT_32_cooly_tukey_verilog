@@ -1,0 +1,6 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.sim/sim_1/synth/func/xsim/Test_FFT_func_synth.v,1622720421,verilog,,D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.srcs/sim_1/new/fft_tp.v,,FFT;complex_mul;complex_mul_15;complex_mul_16;complex_mul_17;complex_mul_18;complex_mul_19;complex_mul_20;complex_mul_21;complex_mul_22;complex_mul_23;complex_mul_24;complex_mul_25;complex_mul_26;complex_mul_27;complex_mul_28;complex_mul_29;glbl;radix_2_fft;radix_2_fft_0;radix_2_fft_1;radix_2_fft_10;radix_2_fft_11;radix_2_fft_12;radix_2_fft_13;radix_2_fft_14;radix_2_fft_2;radix_2_fft_3;radix_2_fft_4;radix_2_fft_5;radix_2_fft_6;radix_2_fft_7;radix_2_fft_8;radix_2_fft_9,,,,,,,,
+D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.srcs/sim_1/new/fft_tp.v,1622473225,verilog,,,,Test_FFT,,,,,,,,

@@ -1,0 +1,7 @@
+Running: xsim.dir/Test_FFT_func_synth/xsimk.exe -simmode gui -wdb Test_FFT_func_synth.wdb -simrunnum 0 -socket 64587
+Design successfully loaded
+Design Loading Memory Usage: 45904 KB (Peak: 45904 KB)
+Design Loading CPU Usage: 281 ms
+Simulation completed
+Simulation Memory Usage: 54964 KB (Peak: 54964 KB)
+Simulation CPU Usage: 1092 ms

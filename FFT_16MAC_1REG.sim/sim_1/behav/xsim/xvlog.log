@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.srcs/sources_1/new/fft.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FFT
+WARNING: [VRFC 10-634] event expressions must result in a singular type [D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.srcs/sources_1/new/fft.v:179]
+WARNING: [VRFC 10-634] event expressions must result in a singular type [D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.srcs/sources_1/new/fft.v:512]
+INFO: [VRFC 10-311] analyzing module complex_mul
+INFO: [VRFC 10-311] analyzing module radix_2_fft
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.srcs/sim_1/new/fft_tp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Test_FFT
