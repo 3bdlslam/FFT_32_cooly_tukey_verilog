@@ -1,0 +1,13 @@
+create_clock -period 20.000 -name clk1 -waveform {0.000 10.000} [get_ports clk1]
+create_generated_clock -name clk2 -source [get_ports clk1] -divide_by 5 [get_pins clk2_reg/Q]
+create_clock -period 100.000 -name VIRTUAL_clk2 -waveform {0.000 50.000}
+set_input_delay -clock [get_clocks VIRTUAL_clk2] -min -add_delay 7.000 [get_ports {Xn_vect_imag[*]}]
+set_input_delay -clock [get_clocks VIRTUAL_clk2] -max -add_delay 10.000 [get_ports {Xn_vect_imag[*]}]
+set_input_delay -clock [get_clocks VIRTUAL_clk2] -min -add_delay 7.000 [get_ports {Xn_vect_real[*]}]
+set_input_delay -clock [get_clocks VIRTUAL_clk2] -max -add_delay 10.000 [get_ports {Xn_vect_real[*]}]
+set_input_delay -clock [get_clocks clk1] -min -add_delay 7.000 [get_ports rst]
+set_input_delay -clock [get_clocks clk1] -max -add_delay 10.000 [get_ports rst]
+set_output_delay -clock [get_clocks clk1] -min -add_delay 0.000 [get_ports {Xk_vect_imag[*]}]
+set_output_delay -clock [get_clocks clk1] -max -add_delay 3.000 [get_ports {Xk_vect_imag[*]}]
+set_output_delay -clock [get_clocks clk1] -min -add_delay 0.000 [get_ports {Xk_vect_real[*]}]
+set_output_delay -clock [get_clocks clk1] -max -add_delay 3.000 [get_ports {Xk_vect_real[*]}]

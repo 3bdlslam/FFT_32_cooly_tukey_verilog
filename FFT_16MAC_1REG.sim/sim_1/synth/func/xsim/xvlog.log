@@ -1,0 +1,37 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.sim/sim_1/synth/func/xsim/Test_FFT_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FFT
+INFO: [VRFC 10-311] analyzing module complex_mul
+INFO: [VRFC 10-311] analyzing module complex_mul_15
+INFO: [VRFC 10-311] analyzing module complex_mul_16
+INFO: [VRFC 10-311] analyzing module complex_mul_17
+INFO: [VRFC 10-311] analyzing module complex_mul_18
+INFO: [VRFC 10-311] analyzing module complex_mul_19
+INFO: [VRFC 10-311] analyzing module complex_mul_20
+INFO: [VRFC 10-311] analyzing module complex_mul_21
+INFO: [VRFC 10-311] analyzing module complex_mul_22
+INFO: [VRFC 10-311] analyzing module complex_mul_23
+INFO: [VRFC 10-311] analyzing module complex_mul_24
+INFO: [VRFC 10-311] analyzing module complex_mul_25
+INFO: [VRFC 10-311] analyzing module complex_mul_26
+INFO: [VRFC 10-311] analyzing module complex_mul_27
+INFO: [VRFC 10-311] analyzing module complex_mul_28
+INFO: [VRFC 10-311] analyzing module complex_mul_29
+INFO: [VRFC 10-311] analyzing module radix_2_fft
+INFO: [VRFC 10-311] analyzing module radix_2_fft_0
+INFO: [VRFC 10-311] analyzing module radix_2_fft_1
+INFO: [VRFC 10-311] analyzing module radix_2_fft_10
+INFO: [VRFC 10-311] analyzing module radix_2_fft_11
+INFO: [VRFC 10-311] analyzing module radix_2_fft_12
+INFO: [VRFC 10-311] analyzing module radix_2_fft_13
+INFO: [VRFC 10-311] analyzing module radix_2_fft_14
+INFO: [VRFC 10-311] analyzing module radix_2_fft_2
+INFO: [VRFC 10-311] analyzing module radix_2_fft_3
+INFO: [VRFC 10-311] analyzing module radix_2_fft_4
+INFO: [VRFC 10-311] analyzing module radix_2_fft_5
+INFO: [VRFC 10-311] analyzing module radix_2_fft_6
+INFO: [VRFC 10-311] analyzing module radix_2_fft_7
+INFO: [VRFC 10-311] analyzing module radix_2_fft_8
+INFO: [VRFC 10-311] analyzing module radix_2_fft_9
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.srcs/sim_1/new/fft_tp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Test_FFT
