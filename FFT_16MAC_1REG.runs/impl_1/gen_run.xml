@@ -1,69 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1622720752">
-  <File Type="OPT-HWDEF" Name="FFT.hwdef"/>
-  <File Type="ROUTE-BUS-SKEW" Name="FFT_bus_skew_routed.rpt"/>
   <File Type="PA-DCP" Name="FFT.dcp"/>
-  <File Type="BITSTR-BMM" Name="FFT_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="FFT_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="FFT_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="FFT_power_routed.rpt"/>
+  <File Type="OPT-HWDEF" Name="FFT.hwdef"/>
   <File Type="PA-TCL" Name="FFT.tcl"/>
-  <File Type="OPT-TIMING" Name="FFT_timing_summary_opted.rpt"/>
+  <File Type="BITSTR-BMM" Name="FFT_bd.bmm"/>
   <File Type="OPT-DCP" Name="FFT_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="FFT_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="FFT_reports.tcl"/>
   <File Type="OPT-DRC" Name="FFT_drc_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="FFT_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="FFT_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="FFT_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="FFT_placed.dcp"/>
-  <File Type="PLACE-IO" Name="FFT_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="FFT_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="FFT_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="FFT_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="FFT_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="FFT_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="FFT_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="FFT_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="FFT_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="FFT.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="FFT_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="FFT_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="FFT_drc_physopted.rpt"/>
   <File Type="BITSTR-MSK" Name="FFT.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="FFT_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="FFT_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="FFT_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="FFT_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="FFT_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="FFT_drc_routed.pb"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="FFT.ltx"/>
-  <File Type="ROUTE-DRC-RPX" Name="FFT_drc_routed.rpx"/>
   <File Type="BITSTR-MMI" Name="FFT.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="FFT_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="FFT_methodology_drc_routed.rpx"/>
   <File Type="BITSTR-SYSDEF" Name="FFT.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="FFT_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="FFT_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="FFT_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="FFT_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="FFT_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="FFT_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="FFT_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="FFT_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="FFT_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="FFT_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="FFT_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="FFT_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="FFT_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="FFT_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="FFT_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="FFT_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="FFT_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="FFT_bus_skew_postroute_physopted.pb"/>
   <File Type="BG-BIT" Name="FFT.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="FFT_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-RBT" Name="FFT.rbt"/>
   <File Type="BITSTR-NKY" Name="FFT.nky"/>
   <File Type="BG-BGN" Name="FFT.bgn"/>

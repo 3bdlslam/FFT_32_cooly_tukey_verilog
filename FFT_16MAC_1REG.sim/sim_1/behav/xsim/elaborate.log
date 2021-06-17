@@ -11,9 +11,5 @@ Compiling module xil_defaultlib.complex_mul
 Compiling module xil_defaultlib.radix_2_fft
 Compiling module xil_defaultlib.FFT
 Compiling module xil_defaultlib.Test_FFT
-WARNING: [XSIM 43-3373] "D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.srcs/sim_1/new/fft_tp.v" Line 33. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.srcs/sim_1/new/fft_tp.v" Line 34. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.srcs/sim_1/new/fft_tp.v" Line 44. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "D:/projects/projects/Verilog/VLSI4_fft32/FFT_16MAC_1REG/FFT_16MAC_1REG.srcs/sim_1/new/fft_tp.v" Line 45. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot Test_FFT_behav

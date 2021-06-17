@@ -169,14 +169,15 @@ MAC_in [14][1][0],MAC_in [14][1][1],
 MAC_in [14][2][0],MAC_in [14][2][1],
 MAC_out[14][0][0],MAC_out[14][0][1],
 MAC_out[14][1][0],MAC_out[14][1][1]);
-radix_2_fft r2_15
+
+radix_2_fft r2_15				// instantiation of MAC num 16
 (MAC_in[15][0][0],MAC_in [15][0][1],
 MAC_in [15][1][0],MAC_in [15][1][1],
 MAC_in [15][2][0],MAC_in [15][2][1],
 MAC_out[15][0][0],MAC_out[15][0][1],
 MAC_out[15][1][0],MAC_out[15][1][1]);
 
-always @(Sel,X_reg) begin
+always @(Sel,X_reg) begin		// input mux assign reg output to MAC input 
 if(Sel==0) begin
 MAC_in[0][0][0]<=X_reg[0][0][0];
 MAC_in[0][0][1]<=X_reg[0][0][1];
@@ -509,7 +510,7 @@ MAC_in[15][1][1]<=X_reg[4][31][1];
 end
 end
 
-always @(Sel,X_reg) begin
+always @(Sel,X_reg) begin		// input constants represent exponential term
 if(Sel==0) begin
 MAC_in[0][2][0]<=8'b00010000;
 MAC_in[0][2][1]<=8'b00000000;
@@ -682,7 +683,7 @@ MAC_in[15][2][1]<=8'b11111101;
 end
 end
 
-always @(posedge clk1) begin
+always @(posedge clk1) begin	// write output on the regiser (sel + 1) 
 if(Sel==0) begin
 X_reg[1][0][0]<=MAC_out[0][0][0];
 X_reg[1][0][1]<=MAC_out[0][0][1];
@@ -1015,7 +1016,7 @@ X_reg[5][31][1]<=MAC_out[15][1][1];
 end
 end
 
-always @(posedge clk2) begin
+always @(posedge clk2) begin	// mapping of input to the first register 
 X_reg[0][0][0]<=X0[0][0];
 X_reg[0][0][1]<=X0[0][1];
 X_reg[0][1][0]<=X0[1][0];
